@@ -91,8 +91,8 @@ export const translations = {
         },
         podcast: {
             badge: "Coming Soon",
-            title: "exefai Podcast",
-            description: "Stay tuned for the exefai Podcast where we dive deep into the tech world. We meet with our partners, entrepreneurs, and more.",
+            title: ".exefai podcast",
+            description: "Stay tuned for the .exefai podcast where we dive deep into the tech world. We meet with our partners, entrepreneurs, and more.",
             launchingSoon: "Launching Soon",
             availableOn: "Available on",
             platforms: ["Apple Podcasts", "YouTube", "Spotify"],
@@ -260,8 +260,8 @@ export const translations = {
         },
         podcast: {
             badge: "قريباً",
-            title: "بودكاست إكسفاي",
-            description: "ترقبوا بودكاست إكسفاي حيث نغوص في عالم التقنية. سنكشف عن أسرار النجاح مع شركائنا، ونستضيف باقة من ألمع رواد الأعمال.",
+            title: ".exefai podcast",
+            description: "ترقبوا .exefai podcast حيث نغوص في عالم التقنية. سنكشف عن أسرار النجاح مع شركائنا، ونستضيف باقة من ألمع رواد الأعمال.",
             launchingSoon: "قريباً الإطلاق",
             availableOn: "متاح على",
             platforms: ["آبل بودكاست", "يوتيوب", "سبوتيفاي"],
