@@ -13,7 +13,7 @@ export const BackgroundShapes = () => {
   if (!isClient) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-hidden pointer-events-none flex items-center justify-center mix-blend-screen">
+    <div className="fixed inset-0 z-[1] overflow-hidden pointer-events-none flex items-center justify-center mix-blend-screen">
 
       {/* Autonomous Drifting Glow — moves on its own across the viewport */}
       <motion.div

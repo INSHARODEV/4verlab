@@ -134,12 +134,29 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-outfit), sans-serif;
 }
 
 /* Smooth transitions for dark mode */
-body, header, footer, section, div, a, p, h1, h2, h3, h4, h5, h6, span {
+body,
+header,
+footer,
+section,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -147,9 +164,11 @@ body, header, footer, section, div, a, p, h1, h2, h3, h4, h5, h6, span {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--background);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 4px;
@@ -160,46 +179,161 @@ body, header, footer, section, div, a, p, h1, h2, h3, h4, h5, h6, span {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .team-scroll::-webkit-scrollbar {
   display: none;
 }
 
 /* Blob animation */
 @keyframes blob-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(2deg); }
-  66% { transform: translateY(5px) rotate(-2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(5px) rotate(-2deg);
+  }
 }
+
 .animate-blob-float {
   animation: blob-float 6s ease-in-out infinite;
 }
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
 .animate-float-delayed {
   animation: float 4s ease-in-out infinite 1s;
 }
+
 .animate-float-delayed-2 {
   animation: float 4s ease-in-out infinite 2s;
+}
+
+/* Shimmer / gradient text animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Rotating gradient border */
+@keyframes rotate-gradient {
+  0% {
+    --angle: 0deg;
+  }
+
+  100% {
+    --angle: 360deg;
+  }
+}
+
+/* Section gradient divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(48, 140, 140, 0.3), transparent);
+}
+
+/* Glow pulse for CTA */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(48, 140, 140, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(48, 140, 140, 0.5), 0 0 60px rgba(48, 140, 140, 0.2);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Page load animation */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: page-enter 0.6s ease-out forwards;
+}
+
+/* Scroll-triggered fade in */
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.7s ease-out forwards;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -211,5 +345,17 @@ body, header, footer, section, div, a, p, h1, h2, h3, h4, h5, h6, span {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px rgba(48, 140, 140, 0.15), inset 0 0 15px rgba(48, 140, 140, 0.05);
   }
 }

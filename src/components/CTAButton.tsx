@@ -18,15 +18,15 @@ export default function CTAButton({
     className?: string;
 }) {
     const base =
-        "inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-300 cursor-pointer";
+        "inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-300 cursor-pointer hover:scale-[1.03] active:scale-[0.98]";
 
     const variants = {
         primary:
-            "bg-primary text-surface-dark hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20",
+            "bg-primary text-surface-dark hover:bg-primary-dark hover:shadow-[0_0_30px_rgba(48,140,140,0.4)] shadow-lg shadow-primary/20",
         secondary:
             "bg-surface text-foreground hover:bg-surface/80 hover:shadow-lg border border-card-border",
         outline:
-            "border-2 border-foreground/20 text-foreground hover:border-primary hover:text-primary",
+            "border-2 border-foreground/20 text-foreground hover:border-primary hover:text-primary hover:shadow-[0_0_20px_rgba(48,140,140,0.2)]",
         dark:
             "bg-surface-dark text-white hover:bg-surface-dark/80",
     };

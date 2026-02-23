@@ -11,6 +11,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/components/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface Logo {
   id: string;
@@ -26,8 +28,9 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-  heading = "Trusted by these companies",
+  heading,
   logos = [
+    // ... existing logos ...
     {
       id: "logo-1",
       description: "Logo 1",
@@ -228,17 +231,21 @@ const Logos3 = ({
     },
   ],
 }: Logos3Props) => {
+  const { language, dir } = useLanguage();
+  const t = translations[language];
+  const displayHeading = heading || t.logos.heading;
+
   return (
     <section className="py-20">
       <div className="container mx-auto text-center">
         <h1 className="my-6 text-4xl font-bold text-pretty lg:text-6xl">
-          {heading}
+          {displayHeading}
         </h1>
       </div>
       <div className="pt-10 md:pt-16 lg:pt-20">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
           <Carousel
-            opts={{ loop: true }}
+            opts={{ loop: true, direction: dir }}
             plugins={[AutoScroll({ playOnInit: true })]}
           >
             <CarouselContent className="ml-0">
@@ -260,8 +267,8 @@ const Logos3 = ({
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="absolute inset-y-0 left-0 w-12 bg-linear-to-r from-background to-transparent"></div>
-          <div className="absolute inset-y-0 right-0 w-12 bg-linear-to-l from-background to-transparent"></div>
+          <div className="absolute inset-y-0 left-0 w-12 bg-linear-to-r from-background to-transparent z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-12 bg-linear-to-l from-background to-transparent z-10"></div>
         </div>
       </div>
     </section>

@@ -11,7 +11,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ComparisonSection from "@/components/sections/ComparisonSection";
 import MapSection from "@/components/sections/MapSection";
 import PodcastSection from "@/components/sections/PodcastSection";
-import PricingSection from "@/components/sections/PricingSection";
 import OpenPositionsSection from "@/components/sections/OpenPositionsSection";
 import CalendlySection from "@/components/sections/CalendlySection";
 
@@ -21,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <Logos3 />
       <TestimonialsSection />
-      <PricingSection />
+      <ComparisonSection />
       <PodcastSection />
       <TeamSection />
       <MapSection />
@@ -29,9 +28,7 @@ export default function Home() {
       <CalendlySection />
       {/* <ServicesSection /> */}
       {/* <FocusRailSection /> */}
-      {/* <InsharoWaySection /> */}
       {/* <CaseStudiesSection /> */}
-      {/* <ComparisonSection /> */}
       {/* <CostSection /> */}
       {/* <SubscribeSection /> */}
     </>
