@@ -1,46 +1,47 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const BackgroundShapes = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
-    const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", updateMousePosition);
-    return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
-
-  const springConfig = { damping: 200, stiffness: 5 }; // Drastically slowed down cursor follow (5% speed)
-  const cursorX = useSpring(0, springConfig);
-  const cursorY = useSpring(0, springConfig);
-
-  useEffect(() => {
-    if (isClient) {
-      cursorX.set(mousePosition.x);
-      cursorY.set(mousePosition.y);
-    }
-  }, [mousePosition, cursorX, cursorY, isClient]);
 
   if (!isClient) return null;
 
   return (
     <div className="fixed inset-0 z-[100] overflow-hidden pointer-events-none flex items-center justify-center mix-blend-screen">
 
-      {/* Dynamic Cursor Glow */}
+      {/* Autonomous Drifting Glow — moves on its own across the viewport */}
       <motion.div
-        className="absolute w-[300px] h-[300px] bg-primary/30 rounded-full blur-[100px] mix-blend-screen hidden md:block"
-        style={{
-          x: cursorX,
-          y: cursorY,
-          translateX: "-50%",
-          translateY: "-50%",
+        animate={{
+          x: ["10vw", "70vw", "30vw", "80vw", "10vw"],
+          y: ["20vh", "60vh", "80vh", "30vh", "20vh"],
         }}
+        transition={{
+          duration: 60,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute w-[350px] h-[350px] bg-primary/25 rounded-full blur-[120px] mix-blend-screen hidden md:block"
+      />
+
+      {/* Second autonomous glow — opposite path */}
+      <motion.div
+        animate={{
+          x: ["80vw", "20vw", "60vw", "10vw", "80vw"],
+          y: ["70vh", "30vh", "10vh", "60vh", "70vh"],
+        }}
+        transition={{
+          duration: 75,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 5,
+        }}
+        className="absolute w-[250px] h-[250px] bg-[#308C8C]/20 rounded-full blur-[100px] mix-blend-screen hidden md:block"
       />
 
       {/* Vibrant Animated Blobs */}
@@ -50,8 +51,8 @@ export const BackgroundShapes = () => {
           y: [0, -100, 50, 0],
           scale: [1, 1.2, 0.9, 1],
         }}
-        transition={{ duration: 500, repeat: Infinity, ease: "easeInOut" }} // Increased from 25
-        className="absolute top-[-10%] left-[-10%] w-[50%] max-w-[800px] aspect-square bg-teal-500/15 rounded-full blur-[120px] mix-blend-screen"
+        transition={{ duration: 120, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-10%] left-[-10%] w-[50%] max-w-[800px] aspect-square bg-[#308C8C]/15 rounded-full blur-[120px] mix-blend-screen"
       />
 
       <motion.div
@@ -60,8 +61,8 @@ export const BackgroundShapes = () => {
           y: [0, 100, -50, 0],
           scale: [1, 1.3, 0.8, 1],
         }}
-        transition={{ duration: 600, repeat: Infinity, ease: "easeInOut", delay: 2 }} // Increased from 30
-        className="absolute bottom-[-10%] right-[-10%] w-[45%] max-w-[700px] aspect-square bg-cyan-500/15 rounded-full blur-[120px] mix-blend-screen"
+        transition={{ duration: 150, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-[-10%] right-[-10%] w-[45%] max-w-[700px] aspect-square bg-[#308C8C]/15 rounded-full blur-[120px] mix-blend-screen"
       />
 
       {/* Floating Sparkles / Stars */}
@@ -75,7 +76,7 @@ export const BackgroundShapes = () => {
             y: [0, -100],
           }}
           transition={{
-            duration: (Math.random() * 3 + 2) * 20, // Increased duration (5% speed)
+            duration: (Math.random() * 3 + 2) * 20,
             repeat: Infinity,
             delay: Math.random() * 5,
             ease: "easeInOut",
@@ -95,8 +96,8 @@ export const BackgroundShapes = () => {
           y: [0, -30, 0]
         }}
         transition={{
-          rotate: { duration: 400, repeat: Infinity, ease: "linear" }, // Increased from 20
-          y: { duration: 160, repeat: Infinity, ease: "easeInOut" } // Increased from 8
+          rotate: { duration: 400, repeat: Infinity, ease: "linear" },
+          y: { duration: 160, repeat: Infinity, ease: "easeInOut" }
         }}
         className="absolute top-[20%] right-[15%] w-16 h-16 border-[2px] border-primary/40 rounded-xl hidden md:block backdrop-blur-md shadow-[0_0_30px_rgba(48,140,140,0.3)]"
       />
@@ -107,10 +108,10 @@ export const BackgroundShapes = () => {
           y: [0, 40, 0]
         }}
         transition={{
-          rotate: { duration: 500, repeat: Infinity, ease: "linear" }, // Increased from 25
-          y: { duration: 200, repeat: Infinity, ease: "easeInOut" } // Increased from 10
+          rotate: { duration: 500, repeat: Infinity, ease: "linear" },
+          y: { duration: 200, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="absolute bottom-[30%] left-[10%] w-20 h-20 border-[2px] border-cyan-500/30 rounded-3xl hidden md:block backdrop-blur-md shadow-[0_0_30px_rgba(6,182,212,0.3)]"
+        className="absolute bottom-[30%] left-[10%] w-20 h-20 border-[2px] border-[#308C8C]/30 rounded-3xl hidden md:block backdrop-blur-md shadow-[0_0_30px_rgba(48,140,140,0.3)]"
       />
 
       {/* Glow lines / Shooting Stars */}
@@ -121,9 +122,9 @@ export const BackgroundShapes = () => {
           opacity: [0, 1, 0]
         }}
         transition={{
-          duration: 60, // Increased from 3
+          duration: 8,
           repeat: Infinity,
-          delay: 5,
+          repeatDelay: 12,
           ease: "linear"
         }}
         className="absolute w-32 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent rotate-45 transform origin-left shadow-[0_0_10px_rgba(255,255,255,0.8)]"
@@ -137,9 +138,9 @@ export const BackgroundShapes = () => {
           opacity: [0, 1, 0]
         }}
         transition={{
-          duration: 80, // Increased from 4
+          duration: 10,
           repeat: Infinity,
-          delay: 2,
+          repeatDelay: 15,
           ease: "linear"
         }}
         className="absolute w-48 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent -rotate-45 transform origin-left shadow-[0_0_20px_rgba(48,140,140,0.8)]"

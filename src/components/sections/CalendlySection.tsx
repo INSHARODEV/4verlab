@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 export default function CalendlySection() {
-  const calendlyUrl = "https://calendly.com/product-insharo/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=F9FBE9&text_color=333333&primary_color=9aab36";
+  const calendlyUrl = "https://calendly.com/product-insharo/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=292931&text_color=E0EBEA&primary_color=308C8C";
 
   return (
     <section id="calendly" className="py-12 bg-surface md:py-24">

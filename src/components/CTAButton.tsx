@@ -24,7 +24,7 @@ export default function CTAButton({
         primary:
             "bg-primary text-surface-dark hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20",
         secondary:
-            "bg-white text-black hover:bg-gray-100 hover:shadow-lg",
+            "bg-surface text-foreground hover:bg-surface/80 hover:shadow-lg border border-card-border",
         outline:
             "border-2 border-foreground/20 text-foreground hover:border-primary hover:text-primary",
         dark:

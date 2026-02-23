@@ -65,20 +65,20 @@ export default function OpenPositionsSection() {
     }, [] as typeof positions[]);
 
     return (
-        <section className="bg-[#D9E6A7] py-12">
+        <section className="bg-[#292931] py-12 border-t border-[#308C8C]/10">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center text-black mb-8">Open positions</h2>
+                <h2 className="text-4xl font-bold text-center text-foreground mb-8">Open positions</h2>
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex">
                         {slides.map((slide, index) => (
                             <div className="flex-[0_0_100%] grid grid-cols-1 md:grid-cols-2 gap-8 px-4" key={index}>
                                 {slide.map((position, posIndex) => (
-                                    <div key={posIndex} className="bg-[#414F3E] rounded-lg p-8 text-white max-w-md mx-auto">
+                                    <div key={posIndex} className="bg-surface rounded-lg p-8 text-white max-w-md mx-auto border border-card-border">
                                         <h3 className="text-2xl font-bold mb-4">{position.title}</h3>
                                         <p className="mb-6">{position.description}</p>
                                         <div className="flex justify-between items-center">
-                                            <span className="bg-purple-800 text-white text-xs font-semibold px-2.5 py-1 rounded">{position.location}</span>
-                                            <button className="bg-white text-black font-bold py-2 px-6 rounded-lg">
+                                            <span className="bg-[#308C8C]/20 text-[#308C8C] text-xs font-semibold px-2.5 py-1 rounded border border-[#308C8C]/30">{position.location}</span>
+                                            <button className="bg-[#308C8C] text-white font-bold py-2 px-6 rounded-lg hover:bg-[#308C8C]/80 transition-colors">
                                                 Apply Now
                                             </button>
                                         </div>
@@ -94,9 +94,8 @@ export default function OpenPositionsSection() {
                             <button
                                 key={index}
                                 onClick={() => scrollTo(index)}
-                                className={`w-3 h-3 rounded-full ${
-                                    index === selectedIndex ? 'bg-white' : 'bg-gray-500'
-                                }`}
+                                className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-[#308C8C]' : 'bg-foreground/30'
+                                    }`}
                             />
                         ))}
                     </div>

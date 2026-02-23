@@ -14,7 +14,7 @@ const testimonials = [
     results: ["35% recovery increase", "SAR 1.8M saved", "90% WhatsApp response"]
   },
   {
-    name: "Fatima Al-Shehri", 
+    name: "Fatima Al-Shehri",
     role: "CFO, Jeddah SME Group",
     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
     url: "/case-studies/jeddah-zatca-payroll",
@@ -32,7 +32,7 @@ const testimonials = [
   {
     name: "Sara Al-Ghamdi",
     role: "CTO, Eastern Province Retail Chain",
-    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID", 
+    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
     url: "/case-studies/eastern-province-retail-app",
     text: "Custom mobile app with AI inventory automation reduced stockouts by 28%. Built and launched in 6 weeks for our 12 Saudi locations.",
     results: ["28% less stockouts", "6-week delivery", "12-store rollout"]
@@ -87,12 +87,12 @@ export default function TestimonialsSection() {
 
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 60 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
       }
     }
   };
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient mesh */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-gradient-to-br from-[#308C8C]/[0.08] via-[#308C8C]/[0.05] to-[#292931]/[0.08]"
           animate={{
             backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
             backgroundSize: '400% 400%'
           }}
         />
-        
+
         {/* Moving light orbs */}
         <motion.div
           className="absolute top-1/3 left-1/5 w-72 h-72 bg-[#308C8C]/15 rounded-full blur-3xl"
@@ -190,7 +190,7 @@ export default function TestimonialsSection() {
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         ref={containerRef}
         className="relative z-10 max-w-7xl mx-auto px-6"
         variants={staggerContainer}
@@ -199,7 +199,7 @@ export default function TestimonialsSection() {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-20"
           variants={fadeInUp}
         >
@@ -216,10 +216,10 @@ export default function TestimonialsSection() {
             <span className="text-sm font-medium text-white/80">
               ✨ Client Success Stories
             </span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-[#308C8C] rounded-full animate-pulse" />
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             className="text-4xl sm:text-6xl md:text-7xl font-bold mb-8 tracking-tight"
             variants={fadeInUp}
           >
@@ -227,8 +227,8 @@ export default function TestimonialsSection() {
               Trusted by
             </span>
             <br />
-            <motion.span 
-              className="bg-clip-text text-transparent bg-gradient-to-r from-[#308C8C] via-gray-400 to-[#308C8C]"
+            <motion.span
+              className="bg-clip-text text-transparent bg-gradient-to-r from-[#308C8C] via-[#308C8C]/60 to-[#308C8C]"
               animate={{
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
               }}
@@ -244,8 +244,8 @@ export default function TestimonialsSection() {
               Industry Leaders
             </motion.span>
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl sm:text-2xl text-white/60 max-w-4xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
@@ -302,7 +302,7 @@ export default function TestimonialsSection() {
 
                     {/* Content */}
                     <div className="flex-1">
-                      <motion.blockquote 
+                      <motion.blockquote
                         className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-light italic"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -382,11 +382,10 @@ export default function TestimonialsSection() {
                     setDirection(index > currentIndex ? 1 : -1);
                     setCurrentIndex(index);
                   }}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex 
-                      ? 'bg-[#308C8C] scale-125' 
+                  className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
+                      ? 'bg-[#308C8C] scale-125'
                       : 'bg-white/30 hover:bg-white/50'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 />
