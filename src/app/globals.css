@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --primary: #308C8C;
+  --primary-dark: #246666;
+  --accent: #308C8C;
+  --surface: #34343d;
+  --surface-dark: #292931;
+  --muted: #E0EBEA;
+  --header-bg: rgba(41, 41, 49, 0.95);
+  --card-bg: #34343d;
+  --card-border: #44444d;
+  --radius: 0.625rem;
+  --background: #292931;
+  --foreground: #E0EBEA;
+  --card: #34343d;
+  --card-foreground: #E0EBEA;
+  --popover: #34343d;
+  --popover-foreground: #E0EBEA;
+  --primary-foreground: #FFFFFF;
+  --secondary: #445A61;
+  --secondary-foreground: #E0EBEA;
+  --muted-foreground: #A0B0AE;
+  --accent-foreground: #222222;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #44444d;
+  --input: #44444d;
+  --ring: #308C8C;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #34343d;
+  --sidebar-foreground: #E0EBEA;
+  --sidebar-primary: #308C8C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #44444d;
+  --sidebar-accent-foreground: #E0EBEA;
+  --sidebar-border: #44444d;
+  --sidebar-ring: #308C8C;
+}
+
+.dark {
+  --primary: #308C8C;
+  --primary-dark: #246666;
+  --accent: #308C8C;
+  --surface: #34343d;
+  --surface-dark: #292931;
+  --muted: #E0EBEA;
+  --header-bg: rgba(41, 41, 49, 0.95);
+  --card-bg: #34343d;
+  --card-border: #44444d;
+  --radius: 0.625rem;
+  --background: #292931;
+  --foreground: #E0EBEA;
+  --card: #34343d;
+  --card-foreground: #E0EBEA;
+  --popover: #34343d;
+  --popover-foreground: #E0EBEA;
+  --primary-foreground: #FFFFFF;
+  --secondary: #445A61;
+  --secondary-foreground: #E0EBEA;
+  --muted-foreground: #A0B0AE;
+  --accent-foreground: #222222;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #44444d;
+  --input: #44444d;
+  --ring: #308C8C;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #34343d;
+  --sidebar-foreground: #E0EBEA;
+  --sidebar-primary: #308C8C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #44444d;
+  --sidebar-accent-foreground: #E0EBEA;
+  --sidebar-border: #44444d;
+  --sidebar-ring: #308C8C;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-muted: var(--muted);
+  --color-header-bg: var(--header-bg);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --font-sans: var(--font-outfit);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Smooth transitions for dark mode */
+body, header, footer, section, div, a, p, h1, h2, h3, h4, h5, h6, span {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* Team carousel scroll */
+.team-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.team-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Blob animation */
+@keyframes blob-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(2deg); }
+  66% { transform: translateY(5px) rotate(-2deg); }
+}
+.animate-blob-float {
+  animation: blob-float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 4s ease-in-out infinite 1s;
+}
+.animate-float-delayed-2 {
+  animation: float 4s ease-in-out infinite 2s;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
