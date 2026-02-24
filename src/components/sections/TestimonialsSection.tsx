@@ -303,28 +303,37 @@ export default function TestimonialsSection() {
 
                       {/* Action Buttons */}
                       <motion.div
-                        className="flex items-center gap-4 mt-8"
+                        className="flex flex-wrap items-center gap-3 mt-8"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
                       >
                         <motion.button
                           onClick={() => setIsVideoOpen(true)}
-                          className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#308C8C] text-white font-semibold transition-all shadow-lg shadow-[#308C8C]/20"
+                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-[#308C8C] text-white font-semibold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "#409a9a" }}
                           whileTap={{ scale: 0.95 }}
                         >
                           <PlayCircle className={`w-5 h-5 ${isRtl ? 'flip-rtl' : ''}`} />
-                          <span>{t.testimonials.watchVideo}</span>
+                          <span className="whitespace-nowrap">{t.testimonials.watchVideo}</span>
                         </motion.button>
                         <motion.button
                           onClick={() => window.open(testimonialsData[currentIndex].url || '#', '_blank')}
-                          className="flex items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20"
+                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                           whileTap={{ scale: 0.95 }}
                         >
-                          <FileText className="w-5 h-5" />
-                          <span>{t.testimonials.viewCaseStudy}</span>
+                          <Sparkles className="w-5 h-5 text-[#308C8C]" />
+                          <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
+                        </motion.button>
+                        <motion.button
+                          onClick={() => window.open(testimonialsData[currentIndex].url || '#', '_blank')}
+                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
+                          whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <FileText className="w-5 h-5 text-white/70" />
+                          <span className="whitespace-nowrap">{t.testimonials.viewCaseStudy}</span>
                         </motion.button>
                       </motion.div>
                     </div>

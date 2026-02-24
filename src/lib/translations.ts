@@ -40,52 +40,37 @@ export const translations = {
             cta: "Everything AI that Saudi businesses need in one platform",
         },
         testimonials: {
-            badge: "✨ Client Success Stories",
-            title: "Trusted by",
-            titleAccent: "Industry Leaders",
-            description: "Join thousands of businesses already transforming their operations with our premium AI solutions.",
+            badge: "✨ Our Products",
+            title: "Discover",
+            titleAccent: "Our Products",
+            description: "Explore our suite of AI agents built specifically for Saudi businesses, automating your operations around the clock.",
             watchVideo: "Watch Video",
             viewCaseStudy: "View Case Study",
+            learnMore: "Learn More", // Added learnMore key
             data: [
                 {
-                    name: "Ahmed Al-Mansoori",
-                    role: "CEO, Riyadh Fintech",
+                    name: "Collections Agent",
+                    role: "Mueen",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/riyadh-fintech-collections",
-                    text: "exefai's Collections Agent transformed our debt recovery. 35% improvement in Saudi Riyal collections through WhatsApp automation. SAMA-compliant and Arabic-first.",
-                    results: ["35% recovery increase", "SAR 1.8M saved", "90% WhatsApp response"]
+                    url: "/products/mueen-collections-agent",
+                    text: "AI handles reminders and recovery via WhatsApp. Frees cash for KSA businesses—no more chasing invoices.",
+                    results: ["Automated WhatsApp Reminders", "Cash flow optimization", "No more chasing invoices"]
                 },
                 {
-                    name: "Fatima Al-Shehri",
-                    role: "CFO, Jeddah SME Group",
+                    name: "Payroll Agent",
+                    role: "Ameen",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/jeddah-zatca-payroll",
-                    text: "ZATCA Phase 2 compliance went from nightmare to autopilot. Zero penalties, 85% time savings on payroll processing across our 5 Riyadh and Jeddah entities.",
-                    results: ["85% time saved", "Zero ZATCA penalties", "Qiwa automated"]
+                    url: "/products/ameen-payroll-agent",
+                    text: "ZATCA/GOSI automation for SMEs. Ends manual errors and fines across any shift operation.",
+                    results: ["ZATCA/GOSI automation", "Zero manual errors", "Shift operation support"]
                 },
                 {
-                    name: "Omar Khalid",
-                    role: "Operations Director, Dammam Healthcare",
+                    name: "Medical GEO Agent",
+                    role: "Hadi",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/dammam-healthcare-geo",
-                    text: "GEO-optimized website + AI appointment booking increased patient bookings 42%. Perfect for Saudi healthcare with Arabic support and local SEO.",
-                    results: ["42% booking increase", "Local SEO #1 Riyadh", "Arabic-first design"]
-                },
-                {
-                    name: "Sara Al-Ghamdi",
-                    role: "CTO, Eastern Province Retail Chain",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/eastern-province-retail-app",
-                    text: "Custom mobile app with AI inventory automation reduced stockouts by 28%. Built and launched in 6 weeks for our 12 Saudi locations.",
-                    results: ["28% less stockouts", "6-week delivery", "12-store rollout"]
-                },
-                {
-                    name: "Khalid Al-Farhan",
-                    role: "Founder, Riyadh Startup",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/riyadh-startup-fullstack",
-                    text: "exefai built our full tech stack: AI agents, web app, mobile app, and GEO SEO. From MVP to SAR 500K MRR in 9 months.",
-                    results: ["SAR 500K MRR", "Full tech stack", "9-month scale"]
+                    url: "/products/hadi-medical-geo-agent",
+                    text: "LLM SEO for Saudi clinics/pharmacies. Gets you found in AI answers for patients searching Arabic health queries.",
+                    results: ["LLM SEO optimization", "Dominates AI answers", "Arabic queries support"]
                 }
             ]
         },
@@ -209,52 +194,37 @@ export const translations = {
             cta: "كل ما تحتاجه الشركات السعودية من حلول الذكاء الاصطناعي في منصة واحدة",
         },
         testimonials: {
-            badge: "✨ قصص نجاح عملائنا",
-            title: "موثوقون من قبل",
-            titleAccent: "رواد الصناعة",
-            description: "انضم إلى آلاف الشركات التي بدأت بالفعل في تطوير عملياتها من خلال حلول الذكاء الاصطناعي المتميزة لدينا.",
+            badge: "✨ منتجاتنا",
+            title: "اكتشف",
+            titleAccent: "منتجاتنا",
+            description: "استكشف مجموعة وكلاء الذكاء الاصطناعي المصمّمة خصيصاً للشركات السعودية لأتمتة عملياتك على مدار الساعة.",
             watchVideo: "شاهد الفيديو",
             viewCaseStudy: "عرض دراسة الحالة",
+            learnMore: "اعرف المزيد", // Added learnMore key for Arabic
             data: [
                 {
-                    name: "أحمد المنصوري",
-                    role: "الرئيس التنفيذي، رياض فينتك",
+                    name: "وكيل التحصيل",
+                    role: "معين",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/riyadh-fintech-collections",
-                    text: "أحدث وكيل التحصيل من إكسفاي تحولاً جذرياً في استرداد ديوننا. شهدنا تحسناً بنسبة 35% في تحصيل الديون عبر أتمتة الواتساب. الحل متوافق تماماً مع ضوابط سما ومصمم للغة العربية.",
-                    results: ["35% زيادة في التحصيل", "توفير 1.8 مليون ريال", "90% استجابة عبر الواتساب"]
+                    url: "/products/mueen-collections-agent",
+                    text: "يتولى الذكاء الاصطناعي مهام التذكير والتحصيل عبر الواتساب. يحرر التدفق النقدي للشركات السعودية - وداعاً لملاحقة الفواتير.",
+                    results: ["تذكير تلقائي عبر الواتساب", "تحسين التدفق النقدي", "إنهاء ملاحقة الفواتير"]
                 },
                 {
-                    name: "فاطمة الشهري",
-                    role: "المدير المالي، مجموعة جدة للمنشآت الصغيرة والمتوسطة",
+                    name: "وكيل الرواتب",
+                    role: "أمين",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/jeddah-zatca-payroll",
-                    text: "تحوّل الالتزام بالمرحلة الثانية لـ (زاتكا) من كابوس إلى عملية تلقائية بالكامل. غرامات صفرية، وتوفير 85% من الوقت المستغرق في معالجة الرواتب لكياناتنا في الرياض وجدة.",
-                    results: ["85% توفير في الوقت", "غرامات زاتكا صفرية", "أتمتة منصة قوى"]
+                    url: "/products/ameen-payroll-agent",
+                    text: "أتمتة هيئة الزكاة (زاتكا) والتأمينات الاجتماعية (GOSI) للشركات المتوسطة والصغيرة. ينهي الأخطاء والغرامات اليدوية عبر كافة الورديات.",
+                    results: ["أتمتة الزكاة والتأمينات", "أخطاء يدوية صفرية", "دعم نظام الورديات"]
                 },
                 {
-                    name: "عمر خالد",
-                    role: "مدير العمليات، الدمام للرعاية الصحية",
+                    name: "وكيل التوطين الطبي",
+                    role: "هادي",
                     iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/dammam-healthcare-geo",
-                    text: "الموقع المحسن جغرافياً مع حجز المواعيد بالذكاء الاصطناعي زاد من حجوزات المرضى بنسبة 42%. مثالي للرعاية الصحية في السعودية لدعمه الكامل للغة العربية والـ SEO المحلي.",
-                    results: ["42% زيادة في الحجوزات", "صدارة SEO في الرياض", "تصميم يدعم العربية أولاً"]
-                },
-                {
-                    name: "سارة الغامدي",
-                    role: "المدير التقني، سلسلة متاجر المنطقة الشرقية",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/eastern-province-retail-app",
-                    text: "تطبيق الجوال المخصص مع أتمتة المخزون قلل من حالات نفاذ المخزون بنسبة 28%. تم البناء والإطلاق خلال 6 أسابيع فقط لجميع فروعنا الـ 12 في المملكة.",
-                    results: ["28% تقليل نفاذ المخزون", "6 أسابيع للتسليم", "تغطية 12 فرعاً"]
-                },
-                {
-                    name: "خالد الفرحان",
-                    role: "مؤسس، شركة تقنية ناشئة بالرياض",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/case-studies/riyadh-startup-fullstack",
-                    text: "قامت إكسفاي ببناء كامل منظومتنا التقنية: وكلاء الذكاء الاصطناعي، تطبيق الويب والجوال، والـ SEO الجغرافي. انتقلنا من نموذج أولي إلى عائد شهري 500 ألف ريال خلال 9 أشهر فقط.",
-                    results: ["500 ألف ريال عائد شهري", "بنية تقنية متكاملة", "توسع سريع خلال 9 أشهر"]
+                    url: "/products/hadi-medical-geo-agent",
+                    text: "تحسين محركات البحث المحلي (LLM SEO) للعيادات والصيدليات السعودية. يتصدر الإجابات الذكية للمرضى الباحثين باللغة العربية.",
+                    results: ["تحسين محركات البحث المحلي", "تصدر إجابات الذكاء الاصطناعي", "دعم الاستفسارات العربية"]
                 }
             ]
         },
