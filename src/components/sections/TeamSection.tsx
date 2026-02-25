@@ -110,21 +110,21 @@ export default function TeamSection() {
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
-                            <div className="relative w-[200px] h-[200px] rounded-2xl overflow-hidden bg-card-bg border border-card-border mb-4 group-hover:border-primary/50 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500">
+                            <div className="relative w-[200px] h-[200px] rounded-2xl overflow-hidden premium-card mb-4 group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(48,140,140,0.3)] transition-all duration-500 ease-out z-10">
                                 {memberImages[member.name] ? (
                                     <>
                                         <Image
                                             src={memberImages[member.name]}
                                             alt={member.name}
                                             fill
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            className="object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
                                         />
-                                        {/* Gradient overlay for name legibility */}
-                                        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
+                                        {/* Deep gradient overlay for name legibility and moody lighting on hover */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
                                     </>
                                 ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/25 via-primary/10 to-surface-dark">
-                                        <span className="text-3xl font-bold text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-300">
+                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/30 via-primary/10 to-transparent">
+                                        <span className="text-4xl font-black text-white/50 group-hover:text-white group-hover:scale-125 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(48,140,140,0.8)]">
                                             {member.name.split(' ').map(n => n.charAt(0)).join('')}
                                         </span>
                                     </div>

@@ -45,9 +45,10 @@ export default function CalendlySection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="glass-card rounded-3xl p-2 sm:p-4 glow-border max-w-4xl mx-auto">
+          <div className="premium-card rounded-3xl p-2 sm:p-4 glow-border max-w-4xl mx-auto shadow-[0_20px_50px_rgba(48,140,140,0.15)] relative group">
+            <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-3xl group-hover:bg-primary/10 transition-colors duration-700 pointer-events-none" />
             <div
-              className="calendly-inline-widget rounded-2xl overflow-hidden"
+              className="calendly-inline-widget rounded-2xl overflow-hidden relative z-10"
               data-url={calendlyUrl}
               style={{ minWidth: '320px', height: '700px' }}
             ></div>

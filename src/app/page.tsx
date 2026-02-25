@@ -13,12 +13,14 @@ import MapSection from "@/components/sections/MapSection";
 import PodcastSection from "@/components/sections/PodcastSection";
 import OpenPositionsSection from "@/components/sections/OpenPositionsSection";
 import CalendlySection from "@/components/sections/CalendlySection";
+import ImpactMetricsSection from "@/components/sections/ImpactMetricsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <Logos3 />
+      <ImpactMetricsSection />
       <TestimonialsSection />
       <ComparisonSection />
       <PodcastSection />

@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="relative py-32 bg-[#292931] text-white overflow-hidden">
+    <section id="testimonials" className="relative py-32 bg-[#292931] text-white overflow-hidden" dir={dir}>
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient mesh */}
@@ -218,8 +218,8 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Main Testimonial Display */}
-        <div className="relative max-w-6xl mx-auto mb-16">
-          <div className="relative h-[500px] md:h-[400px] perspective-1000">
+        <div className="relative max-w-6xl mx-auto mb-16 perspective-[2000px]">
+          <div className="relative h-[550px] md:h-[450px]" style={{ transformStyle: 'preserve-3d' }}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -229,17 +229,20 @@ export default function TestimonialsSection() {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.4 },
-                  scale: { duration: 0.4 },
-                  rotateY: { duration: 0.6 }
+                  x: { type: "spring", stiffness: 200, damping: 25 },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 },
+                  rotateY: { type: "spring", stiffness: 100, damping: 20 }
                 }}
                 className="absolute inset-0"
+                style={{ transformStyle: 'preserve-3d' }}
+                whileHover={{ rotateX: 2, rotateY: -2, scale: 1.02 }}
               >
-                <div className="relative h-full bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-3xl border border-white/[0.15] p-8 md:p-12 overflow-hidden group">
-                  {/* Animated background gradient */}
+                <div className="relative h-full premium-card rounded-3xl p-8 md:p-12 overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                  {/* Glowing orbital edge */}
+                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(ellipse_at_top_right,rgba(48,140,140,0.3),transparent_50%)] pointer-events-none" />
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-[#308C8C]/[0.08] via-[#292931]/[0.05] to-[#308C8C]/[0.08] rounded-3xl"
+                    className="absolute inset-0 bg-gradient-to-br from-[#308C8C]/[0.15] via-transparent to-[#292931]/[0.1] rounded-3xl"
                     animate={{
                       backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
                     }}
@@ -253,15 +256,9 @@ export default function TestimonialsSection() {
                     }}
                   />
 
-                  <div className={`relative z-10 h-full flex flex-col md:flex-row items-center gap-8 ${isRtl ? 'md:flex-row-reverse' : ''}`}>
+                  <div className="relative z-10 h-full flex flex-col md:flex-row items-center gap-8">
                     {/* User Info */}
-                    <div className={`flex-shrink-0 text-center ${isRtl ? 'md:text-right' : 'md:text-left'}`}>
-                      {/* Avatar circle */}
-                      <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-[#308C8C] to-[#308C8C]/40 flex items-center justify-center mb-3 mx-auto ${isRtl ? 'md:ml-0 md:mr-auto' : 'md:mx-0'} ring-2 ring-[#308C8C]/30 ring-offset-2 ring-offset-transparent`}>
-                        <span className="text-lg font-bold text-white">
-                          {testimonialsData[currentIndex].name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
+                    <div className="flex-shrink-0 text-center md:text-start">
                       <h3 className="text-2xl font-bold text-white mb-2">
                         {testimonialsData[currentIndex].name}
                       </h3>
@@ -273,9 +270,11 @@ export default function TestimonialsSection() {
                     {/* Content */}
                     <div className="flex-1 relative">
                       {/* Decorative quote mark */}
-                      <div className={`absolute -top-4 ${isRtl ? '-right-2 rotate-180' : '-left-2'} text-6xl text-[#308C8C]/20 font-serif leading-none select-none`}>&ldquo;</div>
+                      <div className={`absolute -top-4 ${isRtl ? '-right-4' : '-left-4'} text-6xl text-[#308C8C]/20 font-serif leading-none select-none`}>
+                        {isRtl ? '”' : '“'}
+                      </div>
                       <motion.blockquote
-                        className={`text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-light italic ${isRtl ? 'pr-6' : 'pl-6'}`}
+                        className={`text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
@@ -351,7 +350,7 @@ export default function TestimonialsSection() {
               whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowLeft className="w-5 h-5" />
+              {isRtl ? <ArrowRight className="w-5 h-5" /> : <ArrowLeft className="w-5 h-5" />}
             </motion.button>
 
             {/* Progress Bar Indicator */}
@@ -387,7 +386,7 @@ export default function TestimonialsSection() {
               whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowRight className="w-5 h-5" />
+              {isRtl ? <ArrowLeft className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
             </motion.button>
           </div>
         </div>

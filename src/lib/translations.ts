@@ -39,6 +39,41 @@ export const translations = {
             ],
             cta: "Everything AI that Saudi businesses need in one platform",
         },
+        featuresBento: {
+            badge: "✨ Enterprise AI",
+            title: "Top-Tier",
+            titleAccent: "AI Automation",
+            description: "We don't just build software. We engineer autonomous agents that scale your business 24/7.",
+            cards: [
+                {
+                    title: "Conversational AI Agents",
+                    description: "Deploy human-like AI on WhatsApp & Voice to handle customer support, sales, and collections autonomously.",
+                    metric: "24/7",
+                    metricLabel: "Operations"
+                },
+                {
+                    title: "Intelligent Workflows",
+                    description: "Connect your entire tech stack. Our agents trigger actions across CRM, ERP, and payment gateways instantly.",
+                    metric: "10x",
+                    metricLabel: "Faster Execution"
+                },
+                {
+                    title: "Custom LLM Solutions",
+                    description: "We train specialized models on your company data for perfectly accurate, context-aware business intelligence.",
+                    metric: "99%",
+                    metricLabel: "Accuracy"
+                }
+            ]
+        },
+        impactMetrics: {
+            title: "The exefai Impact",
+            metrics: [
+                { value: "500", suffix: "k+", label: "Process Hours Saved" },
+                { value: "98", suffix: "%", label: "Automation Accuracy" },
+                { value: "10", suffix: "x", label: "ROI for Clients" },
+                { value: "24", suffix: "/7", label: "Active AI Agents" }
+            ]
+        },
         testimonials: {
             badge: "✨ Our Products",
             title: "Discover",
@@ -102,6 +137,35 @@ export const translations = {
         map: {
             title: "Global Presence",
             subtitle: "Bringing our worldwide experience to deliver cutting-edge AI solutions directly to Saudi Arabia.",
+            markets: {
+                title: "Our Markets",
+                regions: [
+                    { id: "ca", name: "CA", flag: "🇨🇦" },
+                    { id: "usa", name: "USA", flag: "🇺🇸" },
+                    { id: "uae", name: "UAE", flag: "🇦🇪" },
+                    { id: "ksa", name: "KSA", flag: "🇸🇦" },
+                ]
+            },
+            offices: {
+                title: "Our Offices",
+                locations: [
+                    {
+                        name: "Bogota, Colombia",
+                        desc: "This office serves our partners in the North American market operating in EST time",
+                        flag: "🇨🇴"
+                    },
+                    {
+                        name: "Istanbul, Turkiye",
+                        desc: "This office serves our partners in UAE and KSA operating in GMT+3 time",
+                        flag: "🇹🇷"
+                    },
+                    {
+                        name: "Cairo, Egypt",
+                        desc: "This office serves our partners in KSA and UAE with dedicated Arabic-speaking support",
+                        flag: "🇪🇬"
+                    }
+                ]
+            }
         },
         jobs: {
             title: "Open positions",
@@ -193,6 +257,41 @@ export const translations = {
             ],
             cta: "كل ما تحتاجه الشركات السعودية من حلول الذكاء الاصطناعي في منصة واحدة",
         },
+        featuresBento: {
+            badge: "✨ ذكاء اصطناعي للمؤسسات",
+            title: "أتمتة",
+            titleAccent: "من الطراز الرفيع",
+            description: "نحن لا نبرمج بضع تطبيقات فقط، بل نهندس وكلاء ذكاء اصطناعي لرفع كفاءة أعمالك على مدار الساعة.",
+            cards: [
+                {
+                    title: "وكلاء محادثة ذكية",
+                    description: "أطلق وكلاء ذكاء اصطناعي على واتساب والصوت لإدارة الدعم، والمبيعات، والتحصيل بشكل ذاتي بالكامل.",
+                    metric: "24/7",
+                    metricLabel: "تشغيل متواصل"
+                },
+                {
+                    title: "سير عمل ذكي",
+                    description: "اربط جميع أنظمتك. وكلاؤنا يتخذون إجراءات فورية عبر أنظمة إدارة علاقات العملاء وتخطيط الموارد.",
+                    metric: "10x",
+                    metricLabel: "تنفيذ أسرع"
+                },
+                {
+                    title: "نماذج لغوية مخصصة",
+                    description: "ندرب نماذج متخصصة على بيانات شركتك لتقديم ذكاء أعمال دقيق وملم بالسياق بشكل مثالي.",
+                    metric: "99%",
+                    metricLabel: "دقة عالية"
+                }
+            ]
+        },
+        impactMetrics: {
+            title: "تأثير إكسفاي",
+            metrics: [
+                { value: "500", suffix: "k+", label: "ساعة عمل موفرة" },
+                { value: "98", suffix: "%", label: "دقة الأتمتة" },
+                { value: "10", suffix: "x", label: "عائد الاستثمار للعملاء" },
+                { value: "24", suffix: "/7", label: "وكلاء أذكياء نشطون" }
+            ]
+        },
         testimonials: {
             badge: "✨ منتجاتنا",
             title: "اكتشف",
@@ -256,6 +355,35 @@ export const translations = {
         map: {
             title: "حضورنا العالمي",
             subtitle: "نسخّر خبراتنا العالمية لتقديم أحدث حلول الذكاء الاصطناعي مباشرة إلى قلب المملكة العربية السعودية.",
+            markets: {
+                title: "أسواقنا",
+                regions: [
+                    { id: "ca", name: "كندا", flag: "🇨🇦" },
+                    { id: "usa", name: "أمريكا", flag: "🇺🇸" },
+                    { id: "uae", name: "الإمارات", flag: "🇦🇪" },
+                    { id: "ksa", name: "السعودية", flag: "🇸🇦" },
+                ]
+            },
+            offices: {
+                title: "مكاتبنا",
+                locations: [
+                    {
+                        name: "بوغوتا، كولومبيا",
+                        desc: "يخدم هذا المكتب شركاءنا في سوق أمريكا الشمالية ويعمل بتوقيت شرق الولايات المتحدة (EST)",
+                        flag: "🇨🇴"
+                    },
+                    {
+                        name: "إسطنبول، تركيا",
+                        desc: "يخدم هذا المكتب شركاءنا في الإمارات والسعودية ويعمل بتوقيت غرينتش+٣",
+                        flag: "🇹🇷"
+                    },
+                    {
+                        name: "القاهرة، مصر",
+                        desc: "يخدم هذا المكتب شركاءنا في السعودية والإمارات بدعم مخصص باللغة العربية",
+                        flag: "🇪🇬"
+                    }
+                ]
+            }
         },
         jobs: {
             title: "الوظائف المتاحة",
