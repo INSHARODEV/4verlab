@@ -134,6 +134,8 @@ export default function Footer() {
                         <p className={`text-white/60 text-sm ${isRtl ? 'text-right' : 'text-left'}`}>{language === 'ar' ? 'موثق في منصة الأعمال' : 'Verified on Business Platform'}</p>
                         <Image src="/images/footer-manasa.png" alt="Manasa" width={60} height={60} />
                     </div>
+                    <a href="https://www.g2.com/" target="_blank" rel="noopener noreferrer"><Image src="/images/G2Logo-Red.svg" alt="G2" width={50} height={50} /></a>
+                    <a href="https://www.goodfirms.co/" target="_blank" rel="noopener noreferrer"><Image src="/images/Good Firms Partner Badge.svg" alt="GoodFirms Partner" width={60} height={68} /></a>
                 </div>
             </div>
         </footer>
