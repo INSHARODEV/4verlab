@@ -13,11 +13,23 @@ export default function TeamSection() {
     const teamMembers = t.team.members;
     const scrollRef = useRef<HTMLDivElement>(null);
 
-    // Initial member image mapping (since images are assets, we keep them here or in translations)
-    // Osama is the only one with an image currently
+    // Team member image mapping (English and Arabic names)
     const memberImages: Record<string, string> = {
-        "Osama B.": "/images/New-Osama.png",
-        "أسامة ب.": "/images/New-Osama.png"
+        "Osama B.": "/Team_pics/osama.png",
+        "أسامة ب.": "/Team_pics/osama.png",
+        "Faysal K.": "/Team_pics/Faysal.png",
+        "فيصل ك.": "/Team_pics/Faysal.png",
+        "Afaf A.": "/Team_pics/Afaf.png",
+        "عفاف أ.": "/Team_pics/Afaf.png",
+        "Ghaith A.": "/Team_pics/ghaith.png",
+        "غيث أ.": "/Team_pics/ghaith.png",
+        "Mohamed F.": "/Team_pics/Fakrani.png",
+        "محمد ف.": "/Team_pics/Fakrani.png",
+        "Mennatullah A.": "/Team_pics/Menna.png",
+        "منة الله أ.": "/Team_pics/Menna.png",
+        "Farida": "/Team_pics/Farida.png",
+        "Martina": "/Team_pics/Martina.png",
+        "Nour": "/Team_pics/nour.png",
     };
 
     const scroll = (direction: "prev" | "next") => {
@@ -28,8 +40,6 @@ export default function TeamSection() {
             // LTR: left: -280 moves left (prev), left: 280 moves right (next)
             // RTL: left: 280 moves right (prev), left: -280 moves left (next)
             // So logic should actually be:
-            let amount = direction === "next" ? scrollAmount : -scrollAmount;
-            if (isRtl) amount = -amount; // Reverse for RTL if we want "next" to be the same physical direction? No, next is "forward in reading order".
             // Actually, simplified: direction "prev" vs "next".
             // For LTR: next is +280 (right), prev is -280 (left).
             // For RTL: next is -280 (left), prev is +280 (right).

@@ -123,15 +123,11 @@ export const translations = {
             description: "Get to know the exceptional individuals who power exefai's success",
             members: [
                 { name: "Osama B.", role: "Managing Partner" },
-                { name: "Zümra C.", role: "Senior People & Culture Specialist" },
                 { name: "Faysal K.", role: "Senior Sales Associate" },
                 { name: "Afaf A.", role: "Commercial Senior Associate" },
                 { name: "Ghaith A.", role: "Managing Consultant" },
                 { name: "Mohamed F.", role: "Full Stack Developer" },
                 { name: "Mennatullah A.", role: "Graphic Designer" },
-                { name: "Abdullah F.", role: "Digital Marketing Manager" },
-                { name: "Sara A.", role: "UX/UI Designer" },
-                { name: "Alaa A.", role: "Full Stack Developer" },
             ]
         },
         map: {
@@ -341,15 +337,11 @@ export const translations = {
             description: "تعرف على الكفاءات الاستثنائية التي تقود مسيرة نجاح إكسفاي",
             members: [
                 { name: "أسامة ب.", role: "شريك إداري" },
-                { name: "زومرا ج.", role: "أخصائية أولى في شؤون الموظفين والثقافة" },
                 { name: "فيصل ك.", role: "مساعد أول مبيعات" },
                 { name: "عفاف أ.", role: "مساعد أول تجاري" },
                 { name: "غيث أ.", role: "مستشار إداري" },
                 { name: "محمد ف.", role: "مطور تطبيقات (Full Stack)" },
                 { name: "منة الله أ.", role: "مصممة جرافيك" },
-                { name: "عبدالله ف.", role: "مدير تسويق رقمي" },
-                { name: "سارة أ.", role: "مصممة تجربة وواجهة مستخدم (UX/UI)" },
-                { name: "آلاء أ.", role: "مطور تطبيقات (Full Stack)" },
             ]
         },
         map: {
@@ -436,3 +428,4 @@ export const translations = {
         }
     }
 };
+export type Translation = typeof translations.en;
