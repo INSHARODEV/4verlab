@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="relative py-32 bg-[#292931] text-white overflow-hidden" dir={dir}>
+    <section id="products" className="relative py-32 bg-[#292931] text-white overflow-hidden" dir={dir}>
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient mesh */}

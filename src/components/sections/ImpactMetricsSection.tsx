@@ -58,7 +58,7 @@ export default function ImpactMetricsSection() {
     ];
 
     return (
-        <section className="py-20 bg-background relative overflow-hidden border-y border-white/5">
+        <section id="impact" className="py-20 bg-background relative overflow-hidden border-y border-white/5">
             {/* Background subtle glow */}
             <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />

@@ -5,6 +5,11 @@ export const translations = {
             description: "Automate collections recovery (30% faster), ZATCA payroll compliance, Saudization tracking with AI agents built for KSA businesses. Riyadh-based support. Free demo.",
         },
         nav: {
+            products: "Products",
+            solutions: "Solutions",
+            impact: "Impact",
+            team: "Team",
+            careers: "Careers",
             contact: "Contact",
             demo: "Book a free 30-minute demo",
             chatWithUs: "Chat with us",
@@ -226,6 +231,11 @@ export const translations = {
             description: "أتمتة تحصيل الديون (أسرع بنسبة 30%)، والالتزام بنظام حماية الأجور، ومتابعة التوطين عبر وكلاء ذكاء اصطناعي مصممين للشركات السعودية. دعم من قلب الرياض. اطلب تجربة مجانية الآن.",
         },
         nav: {
+            products: "منتجاتنا",
+            solutions: "حلولنا",
+            impact: "تأثيرنا",
+            team: "فريقنا",
+            careers: "وظائف",
             contact: "تواصل معنا",
             demo: "احجز عرضاً تجريبياً مجانياً",
             chatWithUs: "تحدث معنا",

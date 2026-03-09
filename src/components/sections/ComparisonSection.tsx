@@ -9,7 +9,7 @@ export default function ComparisonSection() {
   const t = translations[language];
   const isRtl = dir === "rtl";
   return (
-    <section className="py-24 px-4 bg-background relative overflow-hidden">
+    <section id="solutions" className="py-24 px-4 bg-background relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Animated organic shapes */}

@@ -18,6 +18,11 @@ export default function Header() {
     const t = translations[language];
 
     const navLinks = [
+        { href: "#products", label: t.nav.products },
+        { href: "#solutions", label: t.nav.solutions },
+        { href: "#impact", label: t.nav.impact },
+        { href: "#team", label: t.nav.team },
+        { href: "#careers", label: t.nav.careers },
         { href: "#contact", label: t.nav.contact },
     ];
 
@@ -78,7 +83,7 @@ export default function Header() {
                         {/* CTA Button - desktop */}
                         <div className="hidden md:block">
                             <CTAButton
-                                href="#calendly"
+                                href="#contact"
                                 text={t.nav.demo}
                                 variant="primary"
                                 size="sm"
@@ -131,7 +136,7 @@ export default function Header() {
                                 <span>{language === "en" ? "تبديل إلى العربية" : "Switch to English"}</span>
                             </button>
                             <CTAButton
-                                href="#calendly"
+                                href="#contact"
                                 text={t.nav.demo}
                                 variant="primary"
                                 size="sm"

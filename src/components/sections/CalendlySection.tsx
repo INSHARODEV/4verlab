@@ -12,7 +12,7 @@ export default function CalendlySection() {
   const calendlyUrl = "https://calendly.com/product-insharo/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=292931&text_color=E0EBEA&primary_color=308C8C";
 
   return (
-    <section id="calendly" className="py-12 bg-surface md:py-24 relative overflow-hidden">
+    <section id="contact" className="py-12 bg-surface md:py-24 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />

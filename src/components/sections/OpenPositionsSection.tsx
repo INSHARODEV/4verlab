@@ -46,7 +46,7 @@ export default function OpenPositionsSection() {
     }, [] as typeof positions[]);
 
     return (
-        <section className="bg-[#292931] py-12 border-t border-primary/10 relative overflow-hidden">
+        <section id="careers" className="bg-[#292931] py-12 border-t border-primary/10 relative overflow-hidden">
             {/* Background effect */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />

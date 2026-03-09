@@ -9,7 +9,7 @@ export default function HeroSection() {
     const t = translations[language];
 
     return (
-        <section className="relative bg-background text-white min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <section id="hero" className="relative bg-background text-white min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background radiant orbs & particles */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px] animate-pulse mix-blend-screen" />
@@ -57,7 +57,7 @@ export default function HeroSection() {
                         {/* CTA Buttons */}
                         <div className={`flex flex-col sm:flex-row gap-4 justify-center ${language === 'ar' ? 'lg:justify-start' : 'lg:justify-start'} animate-fade-in-up`} style={{ animationDelay: "1.0s" }}>
                             <CTAButton
-                                href="#calendly"
+                                href="#contact"
                                 text={t.hero.cta}
                                 variant="primary"
                                 size="lg"
