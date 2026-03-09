@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import CTAButton from "../CTAButton";
 import { useLanguage } from "../LanguageContext";
 import { translations } from "@/lib/translations";

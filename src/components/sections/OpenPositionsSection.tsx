@@ -21,18 +21,22 @@ export default function OpenPositionsSection() {
         emblaApi && emblaApi.scrollTo(index);
     }, [emblaApi]);
 
-    const onSelect = useCallback(() => {
-        if (emblaApi) {
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-        }
-    }, [emblaApi]);
-
     useEffect(() => {
-        if (emblaApi) {
-            onSelect();
-            emblaApi.on('select', onSelect);
-        }
-    }, [emblaApi, onSelect]);
+        if (!emblaApi) return;
+
+        const onSelectCallback = () => {
+            setSelectedIndex(emblaApi.selectedScrollSnap());
+        };
+
+        onSelectCallback(); // Initialize
+        emblaApi.on('select', onSelectCallback);
+        emblaApi.on('reInit', onSelectCallback);
+
+        return () => {
+            emblaApi.off('select', onSelectCallback);
+            emblaApi.off('reInit', onSelectCallback);
+        };
+    }, [emblaApi]);
 
     const slides = positions.reduce((acc, _, i) => {
         if (i % 2 === 0) {

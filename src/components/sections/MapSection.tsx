@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "../LanguageContext";
-import { translations } from "@/lib/translations";
+import { translations, Translation } from "@/lib/translations";
 import PremiumWorldMap from "../PremiumWorldMap";
 
 export default function MapSection() {
     const { language, dir } = useLanguage();
-    // @ts-ignore
-    const t = translations[language];
+    const t = translations[language as keyof typeof translations] as Translation;
     const isRtl = dir === "rtl";
 
     return (
@@ -56,7 +55,7 @@ export default function MapSection() {
                         </motion.h3>
 
                         <div className="flex flex-row lg:flex-col flex-wrap justify-center gap-3 w-full">
-                            {t.map.markets?.regions?.map((market: any, index: number) => (
+                            {t.map.markets?.regions?.map((market, index: number) => (
                                 <motion.div
                                     key={market.id}
                                     initial={{ opacity: 0, x: isRtl ? 20 : -20 }}
@@ -102,7 +101,7 @@ export default function MapSection() {
                         </motion.h3>
 
                         <div className="flex flex-col gap-4 w-full max-w-sm lg:max-w-none">
-                            {t.map.offices?.locations?.map((office: any, index: number) => (
+                            {t.map.offices?.locations?.map((office, index: number) => (
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, x: isRtl ? -20 : 20 }}
