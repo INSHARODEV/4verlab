@@ -2,26 +2,29 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// ───── Mercator projection matching the @svg-maps/world viewBox 0 0 1010 666 ─────
+// ───── Miller cylindrical projection matching @svg-maps/world viewBox 0 0 1010 666 ─────
 function geoToSvg(lat: number, lng: number): { x: number; y: number } {
     const x = ((lng + 180) / 360) * 1010;
     const latRad = (lat * Math.PI) / 180;
-    const mercN = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
-    const y = 666 / 2 - (666 * mercN) / (2 * Math.PI) * 0.97;
+    // Miller cylindrical: y = 1.25 * ln(tan(π/4 + 0.4 * φ))
+    const millerY = 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * latRad));
+    // Map range: Miller projection max latitude ~±85° maps to ~±2.303
+    const millerMax = 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * (85 * Math.PI / 180)));
+    const y = 666 / 2 - (millerY / millerMax) * (666 / 2);
     return { x, y };
 }
 
 // ───── Location data with EN + AR labels ─────
 const OFFICES = [
-    { id: "bogota", en: "Bogota", ar: "بوغوتا", lat: 4.711, lng: -74.072, color: "#f4ca64", labelDx: 0, labelDy: -16 },
-    { id: "istanbul", en: "Istanbul", ar: "إسطنبول", lat: 41.008, lng: 28.978, color: "#f4ca64", labelDx: -30, labelDy: -14 },
-    { id: "cairo", en: "Cairo", ar: "القاهرة", lat: 30.044, lng: 31.236, color: "#f4ca64", labelDx: -28, labelDy: 6 },
+    { id: "bogota", en: "Bogota", ar: "بوغوتا", lat: 4.711, lng: -74.072, color: "#f4ca64", labelDx: 0, labelDy: 20 },
+    { id: "istanbul", en: "Istanbul", ar: "إسطنبول", lat: 41.008, lng: 28.978, color: "#f4ca64", labelDx: 0, labelDy: -14 },
+    { id: "cairo", en: "Cairo", ar: "القاهرة", lat: 30.044, lng: 31.236, color: "#f4ca64", labelDx: -28, labelDy: 4 },
 ];
 
 const MARKETS = [
-    { id: "ksa", en: "KSA", ar: "السعودية", lat: 24.7, lng: 46.7, color: "#22d3ee", labelDx: 0, labelDy: 18 },
-    { id: "uae", en: "UAE", ar: "الإمارات", lat: 24.45, lng: 54.38, color: "#22d3ee", labelDx: 14, labelDy: -12 },
-    { id: "usa", en: "USA", ar: "أمريكا", lat: 39.0, lng: -98.0, color: "#22d3ee", labelDx: 0, labelDy: -14 },
+    { id: "ksa", en: "KSA", ar: "السعودية", lat: 23.8859, lng: 45.0792, color: "#22d3ee", labelDx: 0, labelDy: 18 },
+    { id: "uae", en: "UAE", ar: "الإمارات", lat: 23.4241, lng: 53.8478, color: "#22d3ee", labelDx: 14, labelDy: -12 },
+    { id: "usa", en: "USA", ar: "أمريكا", lat: 37.0902, lng: -95.7129, color: "#22d3ee", labelDx: 0, labelDy: -14 },
     { id: "ca", en: "Canada", ar: "كندا", lat: 56.13, lng: -106.35, color: "#22d3ee", labelDx: 0, labelDy: -14 },
 ];
 
