@@ -35,6 +35,12 @@ export default function TeamSection() {
         "مارتينا مدحت": "/Team_pics/Martina.png",
         "Nour Almohamade": "/Team_pics/nour.png",
         "نور المحمد": "/Team_pics/nour.png",
+        "Mohammed Abbas": "/Team_pics/mohammed.png",
+        "محمد عباس": "/Team_pics/mohammed.png",
+        "Yasser Basha": "/Team_pics/Yasser.png",
+        "ياسر باشا": "/Team_pics/Yasser.png",
+        "Yosef Elwardany": "/Team_pics/wardany.png",
+        "يوسف الورداني": "/Team_pics/wardany.png",
     };
 
     const scroll = (direction: "prev" | "next") => {

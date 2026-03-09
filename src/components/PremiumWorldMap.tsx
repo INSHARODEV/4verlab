@@ -2,30 +2,35 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// ───── Miller cylindrical projection matching @svg-maps/world viewBox 0 0 1010 666 ─────
-function geoToSvg(lat: number, lng: number): { x: number; y: number } {
-    const x = ((lng + 180) / 360) * 1010;
-    const latRad = (lat * Math.PI) / 180;
-    // Miller cylindrical: y = 1.25 * ln(tan(π/4 + 0.4 * φ))
-    const millerY = 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * latRad));
-    // Map range: Miller projection max latitude ~±85° maps to ~±2.303
-    const millerMax = 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * (85 * Math.PI / 180)));
-    const y = 666 / 2 - (millerY / millerMax) * (666 / 2);
-    return { x, y };
+// ───── Helper to map points for the current SVG viewBox (0 0 1010 666) ─────
+// Note: We use pre-calculated centroids for key countries to ensure markers 
+// align perfectly with the custom SVG map paths.
+const SVG_COORDS: Record<string, { x: number; y: number }> = {
+    bogota: { x: 270, y: 451 },
+    istanbul: { x: 574, y: 344 },
+    cairo: { x: 561, y: 385 },
+    ksa: { x: 602, y: 392 },
+    uae: { x: 626, y: 393 },
+    usa: { x: 144, y: 291 },
+    ca: { x: 203, y: 173 },
+};
+
+function geoToSvg(id: string): { x: number; y: number } {
+    return SVG_COORDS[id] || { x: 0, y: 0 };
 }
 
 // ───── Location data with EN + AR labels ─────
 const OFFICES = [
-    { id: "bogota", en: "Bogota", ar: "بوغوتا", lat: 4.711, lng: -74.072, color: "#f4ca64", labelDx: 0, labelDy: 20 },
-    { id: "istanbul", en: "Istanbul", ar: "إسطنبول", lat: 41.008, lng: 28.978, color: "#f4ca64", labelDx: 0, labelDy: -14 },
-    { id: "cairo", en: "Cairo", ar: "القاهرة", lat: 30.044, lng: 31.236, color: "#f4ca64", labelDx: -28, labelDy: 4 },
+    { id: "bogota", en: "Bogota", ar: "بوغوتا", color: "#f4ca64", labelDx: 0, labelDy: 20 },
+    { id: "istanbul", en: "Istanbul", ar: "إسطنبول", color: "#f4ca64", labelDx: 0, labelDy: -14 },
+    { id: "cairo", en: "Cairo", ar: "القاهرة", color: "#f4ca64", labelDx: -32, labelDy: -10 },
 ];
 
 const MARKETS = [
-    { id: "ksa", en: "KSA", ar: "السعودية", lat: 23.8859, lng: 45.0792, color: "#22d3ee", labelDx: 0, labelDy: 18 },
-    { id: "uae", en: "UAE", ar: "الإمارات", lat: 23.4241, lng: 53.8478, color: "#22d3ee", labelDx: 14, labelDy: -12 },
-    { id: "usa", en: "USA", ar: "أمريكا", lat: 37.0902, lng: -95.7129, color: "#22d3ee", labelDx: 0, labelDy: -14 },
-    { id: "ca", en: "Canada", ar: "كندا", lat: 56.13, lng: -106.35, color: "#22d3ee", labelDx: 0, labelDy: -14 },
+    { id: "ksa", en: "KSA", ar: "السعودية", color: "#22d3ee", labelDx: 0, labelDy: 24 },
+    { id: "uae", en: "UAE", ar: "الإمارات", color: "#22d3ee", labelDx: 28, labelDy: -4 },
+    { id: "usa", en: "USA", ar: "أمريكا", color: "#22d3ee", labelDx: 0, labelDy: -14 },
+    { id: "ca", en: "Canada", ar: "كندا", color: "#22d3ee", labelDx: 0, labelDy: -14 },
 ];
 
 const ALL = [...OFFICES, ...MARKETS];
@@ -65,7 +70,7 @@ export default function PremiumWorldMap({ language = "en" }: PremiumWorldMapProp
             });
     }, []);
 
-    const pts = Object.fromEntries(ALL.map((p) => [p.id, geoToSvg(p.lat, p.lng)]));
+    const pts = Object.fromEntries(ALL.map((p) => [p.id, geoToSvg(p.id)]));
 
     const legendOffices = isAr ? "مكاتبنا" : "Offices";
     const legendMarkets = isAr ? "أسواقنا" : "Markets";
