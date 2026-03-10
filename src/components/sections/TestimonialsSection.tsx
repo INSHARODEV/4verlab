@@ -317,7 +317,14 @@ export default function TestimonialsSection() {
                           <span className="whitespace-nowrap">{t.testimonials.watchVideo}</span>
                         </motion.button>
                         <motion.button
-                          onClick={() => window.open(testimonialsData[currentIndex].url || '#', '_blank')}
+                          onClick={() => {
+                            if (testimonialsData[currentIndex].url?.startsWith('#')) {
+                              const el = document.getElementById(testimonialsData[currentIndex].url.substring(1));
+                              el?.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                              window.open(testimonialsData[currentIndex].url || '#', '_blank');
+                            }
+                          }}
                           className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                           whileTap={{ scale: 0.95 }}
@@ -326,7 +333,14 @@ export default function TestimonialsSection() {
                           <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
                         </motion.button>
                         <motion.button
-                          onClick={() => window.open(testimonialsData[currentIndex].url || '#', '_blank')}
+                          onClick={() => {
+                            if (testimonialsData[currentIndex].url?.startsWith('#')) {
+                              const el = document.getElementById(testimonialsData[currentIndex].url.substring(1));
+                              el?.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                              window.open(testimonialsData[currentIndex].url || '#', '_blank');
+                            }
+                          }}
                           className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                           whileTap={{ scale: 0.95 }}

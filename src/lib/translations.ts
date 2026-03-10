@@ -91,24 +91,24 @@ export const translations = {
                 {
                     name: "Collections Agent",
                     role: "Mueen",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/mueen-collections-agent",
+                    iframe: "https://www.youtube.com/embed/rXW_W0R4EGE",
+                    url: "#contact",
                     text: "AI handles reminders and recovery via WhatsApp. Frees cash for KSA businesses—no more chasing invoices.",
                     results: ["Automated WhatsApp Reminders", "Cash flow optimization", "No more chasing invoices"]
                 },
                 {
                     name: "Payroll Agent",
                     role: "Ameen",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/ameen-payroll-agent",
+                    iframe: "https://www.youtube.com/embed/JmKq_kX8_0A",
+                    url: "#contact",
                     text: "ZATCA/GOSI automation for SMEs. Ends manual errors and fines across any shift operation.",
                     results: ["ZATCA/GOSI automation", "Zero manual errors", "Shift operation support"]
                 },
                 {
                     name: "Medical GEO Agent",
                     role: "Hadi",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/hadi-medical-geo-agent",
+                    iframe: "https://www.youtube.com/embed/aqz-KE-bpKQ",
+                    url: "#contact",
                     text: "LLM SEO for Saudi clinics/pharmacies. Gets you found in AI answers for patients searching Arabic health queries.",
                     results: ["LLM SEO optimization", "Dominates AI answers", "Arabic queries support"]
                 }
@@ -317,24 +317,24 @@ export const translations = {
                 {
                     name: "وكيل التحصيل",
                     role: "معين",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/mueen-collections-agent",
+                    iframe: "https://www.youtube.com/embed/rXW_W0R4EGE",
+                    url: "#contact",
                     text: "يتولى الذكاء الاصطناعي مهام التذكير والتحصيل عبر الواتساب. يحرر التدفق النقدي للشركات السعودية - وداعاً لملاحقة الفواتير.",
                     results: ["تذكير تلقائي عبر الواتساب", "تحسين التدفق النقدي", "إنهاء ملاحقة الفواتير"]
                 },
                 {
                     name: "وكيل الرواتب",
                     role: "أمين",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/ameen-payroll-agent",
+                    iframe: "https://www.youtube.com/embed/JmKq_kX8_0A",
+                    url: "#contact",
                     text: "أتمتة هيئة الزكاة (زاتكا) والتأمينات الاجتماعية (GOSI) للشركات المتوسطة والصغيرة. ينهي الأخطاء والغرامات اليدوية عبر كافة الورديات.",
                     results: ["أتمتة الزكاة والتأمينات", "أخطاء يدوية صفرية", "دعم نظام الورديات"]
                 },
                 {
                     name: "وكيل التوطين الطبي",
                     role: "هادي",
-                    iframe: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-                    url: "/products/hadi-medical-geo-agent",
+                    iframe: "https://www.youtube.com/embed/aqz-KE-bpKQ",
+                    url: "#contact",
                     text: "تحسين محركات البحث المحلي (LLM SEO) للعيادات والصيدليات السعودية. يتصدر الإجابات الذكية للمرضى الباحثين باللغة العربية.",
                     results: ["تحسين محركات البحث المحلي", "تصدر إجابات الذكاء الاصطناعي", "دعم الاستفسارات العربية"]
                 }

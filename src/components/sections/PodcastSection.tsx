@@ -55,7 +55,7 @@ export default function PodcastSection() {
                         <div className={`absolute ${isRtl ? 'left-0 sm:left-4 md:left-8 lg:-right-16' : 'right-0 sm:right-4 md:right-8 lg:-left-16'} top-1/2 transform -translate-y-1/2 w-60 z-20`}>
                             <div className="glass-card rounded-2xl shadow-lg p-5 space-y-4 border border-primary/20">
                                 {t.podcast.platforms.map((name, index) => (
-                                    <Link href="#" key={name}>
+                                    <Link href="#contact" key={name}>
                                         <div className={`flex items-center gap-4 hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/5 rounded-xl p-1 ${isRtl ? 'flex-row-reverse' : ''}`}>
                                             <div className="p-3 rounded-xl bg-primary/10 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(48,140,140,0.3)]">
                                                 {icons[index]}
@@ -101,7 +101,7 @@ export default function PodcastSection() {
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                                 </span>
                             </div>
-                            <Link href="#">
+                            <Link href="https://x.com/insharo_sa" target="_blank">
                                 <motion.div
                                     className={`inline-flex items-center ${isRtl ? 'justify-end pr-6' : 'justify-start pl-6'} gap-4 rounded-full p-2 transition-all bg-primary/10 text-foreground hover:bg-primary/20 cursor-pointer border border-primary/20 hover:border-primary/40 hover:shadow-[0_0_25px_rgba(48,140,140,0.15)]`}
                                     whileHover={{ scale: 1.03 }}
