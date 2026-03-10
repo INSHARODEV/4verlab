@@ -92,7 +92,7 @@ export const translations = {
                     name: "Collections Agent",
                     role: "Mueen",
                     iframe: "https://www.youtube.com/embed/rXW_W0R4EGE",
-                    url: "#contact",
+                    url: "/products/mueen-collections-agent",
                     text: "AI handles reminders and recovery via WhatsApp. Frees cash for KSA businesses—no more chasing invoices.",
                     results: ["Automated WhatsApp Reminders", "Cash flow optimization", "No more chasing invoices"]
                 },
@@ -100,7 +100,7 @@ export const translations = {
                     name: "Payroll Agent",
                     role: "Ameen",
                     iframe: "https://www.youtube.com/embed/JmKq_kX8_0A",
-                    url: "#contact",
+                    url: "/products/ameen-payroll-agent",
                     text: "ZATCA/GOSI automation for SMEs. Ends manual errors and fines across any shift operation.",
                     results: ["ZATCA/GOSI automation", "Zero manual errors", "Shift operation support"]
                 },
@@ -108,7 +108,7 @@ export const translations = {
                     name: "Medical GEO Agent",
                     role: "Hadi",
                     iframe: "https://www.youtube.com/embed/aqz-KE-bpKQ",
-                    url: "#contact",
+                    url: "/products/hadi-medical-geo-agent",
                     text: "LLM SEO for Saudi clinics/pharmacies. Gets you found in AI answers for patients searching Arabic health queries.",
                     results: ["LLM SEO optimization", "Dominates AI answers", "Arabic queries support"]
                 }
@@ -318,7 +318,7 @@ export const translations = {
                     name: "وكيل التحصيل",
                     role: "معين",
                     iframe: "https://www.youtube.com/embed/rXW_W0R4EGE",
-                    url: "#contact",
+                    url: "/products/mueen-collections-agent",
                     text: "يتولى الذكاء الاصطناعي مهام التذكير والتحصيل عبر الواتساب. يحرر التدفق النقدي للشركات السعودية - وداعاً لملاحقة الفواتير.",
                     results: ["تذكير تلقائي عبر الواتساب", "تحسين التدفق النقدي", "إنهاء ملاحقة الفواتير"]
                 },
@@ -326,7 +326,7 @@ export const translations = {
                     name: "وكيل الرواتب",
                     role: "أمين",
                     iframe: "https://www.youtube.com/embed/JmKq_kX8_0A",
-                    url: "#contact",
+                    url: "/products/ameen-payroll-agent",
                     text: "أتمتة هيئة الزكاة (زاتكا) والتأمينات الاجتماعية (GOSI) للشركات المتوسطة والصغيرة. ينهي الأخطاء والغرامات اليدوية عبر كافة الورديات.",
                     results: ["أتمتة الزكاة والتأمينات", "أخطاء يدوية صفرية", "دعم نظام الورديات"]
                 },
@@ -334,7 +334,7 @@ export const translations = {
                     name: "وكيل التوطين الطبي",
                     role: "هادي",
                     iframe: "https://www.youtube.com/embed/aqz-KE-bpKQ",
-                    url: "#contact",
+                    url: "/products/hadi-medical-geo-agent",
                     text: "تحسين محركات البحث المحلي (LLM SEO) للعيادات والصيدليات السعودية. يتصدر الإجابات الذكية للمرضى الباحثين باللغة العربية.",
                     results: ["تحسين محركات البحث المحلي", "تصدر إجابات الذكاء الاصطناعي", "دعم الاستفسارات العربية"]
                 }

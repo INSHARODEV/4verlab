@@ -14,7 +14,8 @@ export default function TestimonialsSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMode, setModalMode] = useState<'video' | 'website'>('video');
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -80,6 +81,11 @@ export default function TestimonialsSection() {
   const prevTestimonial = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
+  };
+
+  const openModal = (mode: 'video' | 'website') => {
+    setModalMode(mode);
+    setIsModalOpen(true);
   };
 
   return (
@@ -308,7 +314,7 @@ export default function TestimonialsSection() {
                         transition={{ delay: 0.8, duration: 0.6 }}
                       >
                         <motion.button
-                          onClick={() => setIsVideoOpen(true)}
+                          onClick={() => openModal('video')}
                           className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-[#308C8C] text-white font-semibold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "#409a9a" }}
                           whileTap={{ scale: 0.95 }}
@@ -317,14 +323,7 @@ export default function TestimonialsSection() {
                           <span className="whitespace-nowrap">{t.testimonials.watchVideo}</span>
                         </motion.button>
                         <motion.button
-                          onClick={() => {
-                            if (testimonialsData[currentIndex].url?.startsWith('#')) {
-                              const el = document.getElementById(testimonialsData[currentIndex].url.substring(1));
-                              el?.scrollIntoView({ behavior: 'smooth' });
-                            } else {
-                              window.open(testimonialsData[currentIndex].url || '#', '_blank');
-                            }
-                          }}
+                          onClick={() => openModal('website')}
                           className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                           whileTap={{ scale: 0.95 }}
@@ -333,14 +332,7 @@ export default function TestimonialsSection() {
                           <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
                         </motion.button>
                         <motion.button
-                          onClick={() => {
-                            if (testimonialsData[currentIndex].url?.startsWith('#')) {
-                              const el = document.getElementById(testimonialsData[currentIndex].url.substring(1));
-                              el?.scrollIntoView({ behavior: 'smooth' });
-                            } else {
-                              window.open(testimonialsData[currentIndex].url || '#', '_blank');
-                            }
-                          }}
+                          onClick={() => openModal('website')}
                           className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
                           whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                           whileTap={{ scale: 0.95 }}
@@ -407,36 +399,69 @@ export default function TestimonialsSection() {
 
       </motion.div>
 
-      {/* Video Modal */}
+      {/* Enhanced Modal (Video & Website Support) */}
       <AnimatePresence>
-        {isVideoOpen && (
+        {isModalOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-            onClick={() => setIsVideoOpen(false)}
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4 md:p-10"
+            onClick={() => setIsModalOpen(false)}
           >
             <motion.div
-              initial={{ scale: 0.8, y: 100 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.8, y: 100 }}
-              className="relative w-full max-w-4xl bg-black rounded-lg shadow-2xl overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className={`relative w-full h-full max-w-6xl bg-[#292931] rounded-3xl shadow-2xl overflow-hidden border border-white/10 ${modalMode === 'video' ? 'aspect-video max-h-[80vh]' : ''}`}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative" style={{ paddingTop: '56.25%' }}>
-                <iframe
-                  src={testimonialsData[currentIndex].iframe || "https://www.youtube.com/embed/YOUR_VIDEO_ID"}
-                  className="absolute top-0 left-0 w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
+              {modalMode === 'video' ? (
+                <div className="relative w-full h-full">
+                  <iframe
+                    src={testimonialsData[currentIndex].iframe || "https://www.youtube.com/embed/YOUR_VIDEO_ID"}
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                <div className="relative w-full h-full flex flex-col">
+                  {/* Iframe Header */}
+                  <div className="flex items-center justify-between px-6 py-4 bg-background/50 border-b border-white/10">
+                    <div className="flex items-center gap-3">
+                      <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+                        <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                        <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+                      </div>
+                      <div className="text-sm font-medium text-white/40 truncate max-w-[200px] md:max-w-md bg-white/5 px-4 py-1 rounded-full border border-white/5">
+                        exefai.sa{testimonialsData[currentIndex].url}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <button
+                        onClick={() => setModalMode('video')}
+                        className="text-xs font-bold text-primary hover:underline"
+                      >
+                        {isRtl ? 'شاهد الفيديو بدلاً من ذلك' : 'Watch video instead'}
+                      </button>
+                    </div>
+                  </div>
+                  {/* The actual product page iframe */}
+                  <iframe
+                    src={testimonialsData[currentIndex].url}
+                    className="flex-1 w-full border-none bg-background"
+                    title="Product Preview"
+                  />
+                </div>
+              )}
+
               <motion.button
-                onClick={() => setIsVideoOpen(false)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
-                whileHover={{ scale: 1.1 }}
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all z-[60]"
+                whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <X className="w-6 h-6" />
