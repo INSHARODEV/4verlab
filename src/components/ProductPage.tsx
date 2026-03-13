@@ -21,6 +21,7 @@ interface ProductPageProps {
     features: Feature[];
     benefits: { en: string; ar: string }[];
     heroImage?: string;
+    videoEmbed?: string;
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({
@@ -30,6 +31,7 @@ const ProductPage: React.FC<ProductPageProps> = ({
     description,
     features,
     benefits,
+    videoEmbed,
 }) => {
     const { language, dir } = useLanguage();
     const isAr = language === "ar";
@@ -98,21 +100,33 @@ const ProductPage: React.FC<ProductPageProps> = ({
                             transition={{ duration: 0.8 }}
                             className="relative"
                         >
-                            <div className="aspect-[4/3] rounded-3xl premium-card overflow-hidden flex items-center justify-center p-8 border border-primary/20">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-50" />
-                                <div className="relative z-10 text-center">
-                                    <div className="w-24 h-24 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary animate-float">
-                                        <Zap size={48} />
-                                    </div>
-                                    <div className="space-y-4">
-                                        {benefits.map((benefit, i) => (
-                                            <div key={i} className="flex items-center gap-3 bg-surface/50 backdrop-blur-sm p-4 rounded-xl border border-white/5 shadow-xl">
-                                                <CheckCircle2 className="text-primary flex-shrink-0" size={20} />
-                                                <span className="text-foreground font-medium">{isAr ? benefit.ar : benefit.en}</span>
+                            <div className="aspect-video rounded-3xl premium-card overflow-hidden flex items-center justify-center border border-primary/20 bg-black/20 relative">
+                                {videoEmbed ? (
+                                    <iframe
+                                        src={videoEmbed}
+                                        title={`${isAr ? accentTitle.ar : accentTitle.en} Video`}
+                                        className="absolute inset-0 w-full h-full"
+                                        allowFullScreen
+                                        frameBorder="0"
+                                    />
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-50" />
+                                        <div className="relative z-10 text-center p-8">
+                                            <div className="w-24 h-24 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary animate-float">
+                                                <Zap size={48} />
                                             </div>
-                                        ))}
-                                    </div>
-                                </div>
+                                            <div className="space-y-4">
+                                                {benefits.map((benefit, i) => (
+                                                    <div key={i} className="flex items-center gap-3 bg-surface/50 backdrop-blur-sm p-4 rounded-xl border border-white/5 shadow-xl">
+                                                        <CheckCircle2 className="text-primary flex-shrink-0" size={20} />
+                                                        <span className="text-foreground font-medium">{isAr ? benefit.ar : benefit.en}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
                             </div>
 
                             {/* Decorative Blobs */}

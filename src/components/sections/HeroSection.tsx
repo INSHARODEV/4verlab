@@ -74,13 +74,12 @@ export default function HeroSection() {
                             {/* Inner Glass border reflection */}
                             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none z-20" />
 
-                            <video
-                                src="https://assets.codepen.io/3364143/7btrrd.mp4"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="object-cover w-full h-full rounded-3xl p-1 transition-transform duration-1000 group-hover:scale-[1.03] opacity-90 group-hover:opacity-100 z-10 relative"
+                            <iframe
+                                src="https://www.youtube.com/embed/gvtos8V2vUc?autoplay=1&mute=1&loop=1&playlist=gvtos8V2vUc&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"
+                                title="Hero Video"
+                                className="w-full h-full rounded-3xl p-1 transition-transform duration-1000 group-hover:scale-[1.03] opacity-90 group-hover:opacity-100 z-10 relative pointer-events-none"
+                                allow="autoplay; encrypted-media"
+                                frameBorder="0"
                             />
                         </div>
                     </div>

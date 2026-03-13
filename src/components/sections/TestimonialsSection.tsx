@@ -262,85 +262,88 @@ export default function TestimonialsSection() {
                     }}
                   />
 
-                  <div className="relative z-10 h-full flex flex-col md:flex-row items-center gap-8">
-                    {/* User Info */}
-                    <div className="flex-shrink-0 text-center md:text-start">
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {testimonialsData[currentIndex].name}
-                      </h3>
-                      <p className="text-[#308C8C] mb-1 font-medium">
-                        {testimonialsData[currentIndex].role}
-                      </p>
+                  <div className="relative z-10 h-full flex flex-col lg:flex-row items-stretch gap-8">
+                    {/* Content Column */}
+                    <div className="flex-1 flex flex-col justify-center">
+                      <div className="flex-shrink-0 text-center lg:text-start mb-6">
+                        <h3 className="text-3xl font-bold text-white mb-2">
+                          {testimonialsData[currentIndex].name}
+                        </h3>
+                        <p className="text-[#308C8C] text-lg font-semibold">
+                          {testimonialsData[currentIndex].role}
+                        </p>
+                      </div>
+
+                      <div className="relative">
+                        {/* Decorative quote mark */}
+                        <div className={`absolute -top-4 ${isRtl ? '-right-4' : '-left-4'} text-6xl text-[#308C8C]/20 font-serif leading-none select-none`}>
+                          {isRtl ? '”' : '“'}
+                        </div>
+                        <motion.blockquote
+                          className={`text-lg md:text-xl text-white/90 leading-relaxed mb-6 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.3, duration: 0.8 }}
+                        >
+                          {testimonialsData[currentIndex].text}
+                        </motion.blockquote>
+
+                        {/* Results */}
+                        <div className="grid grid-cols-1 gap-3 mb-8">
+                          {testimonialsData[currentIndex].results.map((result: string, i: number) => (
+                            <motion.div
+                              key={i}
+                              className="bg-white/[0.05] rounded-lg p-3 border border-white/[0.1] backdrop-blur-sm flex items-center gap-3"
+                              initial={{ opacity: 0, x: isRtl ? 20 : -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
+                              whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                            >
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#308C8C]" />
+                              <span className="text-sm text-white/70 font-medium">
+                                {result}
+                              </span>
+                            </motion.div>
+                          ))}
+                        </div>
+
+                        {/* Action Buttons */}
+                        <motion.div
+                          className="flex flex-wrap items-center gap-3"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.8, duration: 0.6 }}
+                        >
+                          <motion.button
+                            onClick={() => openModal('website')}
+                            className="flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-[#308C8C] text-white font-bold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto hover:bg-[#409a9a] active:scale-95"
+                          >
+                            <Sparkles className="w-5 h-5" />
+                            <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
+                          </motion.button>
+                          <motion.button
+                            onClick={() => openModal('website')}
+                            className="flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto hover:bg-white/[0.15] active:scale-95"
+                          >
+                            <FileText className="w-5 h-5 text-white/70" />
+                            <span className="whitespace-nowrap">{t.testimonials.viewCaseStudy}</span>
+                          </motion.button>
+                        </motion.div>
+                      </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="flex-1 relative">
-                      {/* Decorative quote mark */}
-                      <div className={`absolute -top-4 ${isRtl ? '-right-4' : '-left-4'} text-6xl text-[#308C8C]/20 font-serif leading-none select-none`}>
-                        {isRtl ? '”' : '“'}
+                    {/* Video Column */}
+                    <div className="flex-1 min-h-[300px] lg:min-h-full">
+                      <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group/video">
+                        <div className="absolute inset-0 bg-black/40 z-0" />
+                        <iframe
+                          src={testimonialsData[currentIndex].iframe}
+                          title={`${testimonialsData[currentIndex].name} Video`}
+                          className="absolute inset-0 w-full h-full z-10"
+                          allowFullScreen
+                          frameBorder="0"
+                        />
                       </div>
-                      <motion.blockquote
-                        className={`text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                      >
-                        {testimonialsData[currentIndex].text}
-                      </motion.blockquote>
-
-                      {/* Results */}
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {testimonialsData[currentIndex].results.map((result: string, i: number) => (
-                          <motion.div
-                            key={i}
-                            className="bg-white/[0.05] rounded-lg p-3 border border-white/[0.1] backdrop-blur-sm"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
-                            whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                          >
-                            <span className="text-sm text-white/70 font-medium">
-                              {result}
-                            </span>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* Action Buttons */}
-                      <motion.div
-                        className="flex flex-wrap items-center gap-3 mt-8"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.6 }}
-                      >
-                        <motion.button
-                          onClick={() => openModal('video')}
-                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-[#308C8C] text-white font-semibold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto"
-                          whileHover={{ scale: 1.05, backgroundColor: "#409a9a" }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <PlayCircle className={`w-5 h-5 ${isRtl ? 'flip-rtl' : ''}`} />
-                          <span className="whitespace-nowrap">{t.testimonials.watchVideo}</span>
-                        </motion.button>
-                        <motion.button
-                          onClick={() => openModal('website')}
-                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
-                          whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Sparkles className="w-5 h-5 text-[#308C8C]" />
-                          <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
-                        </motion.button>
-                        <motion.button
-                          onClick={() => openModal('website')}
-                          className="flex justify-center items-center gap-2 px-5 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto"
-                          whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <FileText className="w-5 h-5 text-white/70" />
-                          <span className="whitespace-nowrap">{t.testimonials.viewCaseStudy}</span>
-                        </motion.button>
-                      </motion.div>
                     </div>
                   </div>
                 </div>

@@ -38,6 +38,7 @@ export default function HadiPage() {
                     icon: <BarChart3 size={24} />
                 }
             ]}
+            videoEmbed="https://www.loom.com/embed/b1993f26b3ca4b20851b483ea63f5822"
         />
     );
 }

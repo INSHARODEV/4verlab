@@ -38,6 +38,7 @@ export default function AmeenPage() {
                     icon: <UserCheck size={24} />
                 }
             ]}
+            videoEmbed="https://www.loom.com/embed/ca63a02ef7db47e4a24a1c831584ac28"
         />
     );
 }

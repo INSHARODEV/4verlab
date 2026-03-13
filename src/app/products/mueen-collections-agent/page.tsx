@@ -38,6 +38,7 @@ export default function MueenPage() {
                     icon: <BarChart3 size={24} />
                 }
             ]}
+            videoEmbed="https://www.loom.com/embed/5d710d17da9a4c94a9d84719be6648ea"
         />
     );
 }
