@@ -244,7 +244,7 @@ export default function TestimonialsSection() {
                 style={{ transformStyle: 'preserve-3d' }}
                 whileHover={{ rotateX: 2, rotateY: -2, scale: 1.02 }}
               >
-                <div className="relative h-full premium-card rounded-3xl p-8 md:p-12 overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <div className="relative h-full premium-card rounded-3xl p-10 md:p-16 overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                   {/* Glowing orbital edge */}
                   <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(ellipse_at_top_right,rgba(48,140,140,0.3),transparent_50%)] pointer-events-none" />
                   <motion.div
@@ -262,25 +262,25 @@ export default function TestimonialsSection() {
                     }}
                   />
 
-                  <div className="relative z-10 h-full flex flex-col lg:flex-row items-stretch gap-8">
+                  <div className="relative z-10 h-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     {/* Content Column */}
                     <div className="flex-1 flex flex-col justify-center">
-                      <div className="flex-shrink-0 text-center lg:text-start mb-6">
-                        <h3 className="text-3xl font-bold text-white mb-2">
+                      <div className="flex-shrink-0 text-center lg:text-start mb-8">
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
                           {testimonialsData[currentIndex].name}
                         </h3>
-                        <p className="text-[#308C8C] text-lg font-semibold">
+                        <p className="text-[#308C8C] text-lg md:text-xl font-semibold opacity-90">
                           {testimonialsData[currentIndex].role}
                         </p>
                       </div>
 
                       <div className="relative">
                         {/* Decorative quote mark */}
-                        <div className={`absolute -top-4 ${isRtl ? '-right-4' : '-left-4'} text-6xl text-[#308C8C]/20 font-serif leading-none select-none`}>
+                        <div className={`absolute -top-6 ${isRtl ? '-right-4' : '-left-4'} text-7xl text-[#308C8C]/10 font-serif leading-none select-none`}>
                           {isRtl ? '”' : '“'}
                         </div>
                         <motion.blockquote
-                          className={`text-lg md:text-xl text-white/90 leading-relaxed mb-6 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
+                          className={`text-lg md:text-xl text-white/80 leading-relaxed mb-8 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.3, duration: 0.8 }}
@@ -289,18 +289,17 @@ export default function TestimonialsSection() {
                         </motion.blockquote>
 
                         {/* Results */}
-                        <div className="grid grid-cols-1 gap-3 mb-8">
+                        <div className="grid grid-cols-1 gap-4 mb-10">
                           {testimonialsData[currentIndex].results.map((result: string, i: number) => (
                             <motion.div
                               key={i}
-                              className="bg-white/[0.05] rounded-lg p-3 border border-white/[0.1] backdrop-blur-sm flex items-center gap-3"
+                              className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.08] backdrop-blur-sm flex items-center gap-4 transition-colors hover:bg-white/[0.06]"
                               initial={{ opacity: 0, x: isRtl ? 20 : -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
-                              whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                             >
-                              <div className="w-1.5 h-1.5 rounded-full bg-[#308C8C]" />
-                              <span className="text-sm text-white/70 font-medium">
+                              <div className="w-2 h-2 rounded-full bg-[#308C8C] shadow-[0_0_10px_rgba(48,140,140,0.5)]" />
+                              <span className="text-sm md:text-base text-white/70 font-medium">
                                 {result}
                               </span>
                             </motion.div>
@@ -309,23 +308,23 @@ export default function TestimonialsSection() {
 
                         {/* Action Buttons */}
                         <motion.div
-                          className="flex flex-wrap items-center gap-3"
+                          className="flex flex-wrap items-center gap-4"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.8, duration: 0.6 }}
                         >
                           <motion.button
                             onClick={() => openModal('website')}
-                            className="flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-[#308C8C] text-white font-bold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto hover:bg-[#409a9a] active:scale-95"
+                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-[#308C8C] text-white font-bold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto hover:bg-[#409a9a] hover:scale-[1.02] active:scale-[0.98]"
                           >
-                            <Sparkles className="w-5 h-5" />
+                            <Sparkles className="w-5 h-5 text-cyan-200" />
                             <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
                           </motion.button>
                           <motion.button
                             onClick={() => openModal('website')}
-                            className="flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-white/[0.1] text-white font-semibold transition-all border border-white/20 w-full sm:w-auto hover:bg-white/[0.15] active:scale-95"
+                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white/[0.05] text-white font-semibold transition-all border border-white/10 w-full sm:w-auto hover:bg-white/[0.1] hover:border-white/20 active:scale-[0.98]"
                           >
-                            <FileText className="w-5 h-5 text-white/70" />
+                            <FileText className="w-5 h-5 text-white/60" />
                             <span className="whitespace-nowrap">{t.testimonials.viewCaseStudy}</span>
                           </motion.button>
                         </motion.div>
@@ -333,9 +332,8 @@ export default function TestimonialsSection() {
                     </div>
 
                     {/* Video Column */}
-                    <div className="flex-1 min-h-[300px] lg:min-h-full">
-                      <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group/video">
-                        <div className="absolute inset-0 bg-black/40 z-0" />
+                    <div className="flex-1 w-full lg:w-1/2 aspect-video lg:aspect-square xl:aspect-video">
+                      <div className="relative h-full w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl group/video bg-black/40">
                         <iframe
                           src={testimonialsData[currentIndex].iframe}
                           title={`${testimonialsData[currentIndex].name} Video`}
