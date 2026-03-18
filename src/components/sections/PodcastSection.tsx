@@ -45,7 +45,7 @@ export default function PodcastSection() {
                             {/* Glow halo behind image */}
                             <div className="absolute -inset-6 bg-primary/10 rounded-full blur-[60px]" />
                             <Image
-                                src="/images/person.png"
+                                src="/4ver_podcast.png"
                                 alt="Podcast Host"
                                 layout="fill"
                                 objectFit="cover"

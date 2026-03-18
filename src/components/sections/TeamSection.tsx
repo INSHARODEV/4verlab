@@ -23,8 +23,8 @@ export default function TeamSection() {
         "عفاف شوا": "/Team_pics/afaf 1.png",
         "Faysal Kurbeh": "/Team_pics/faysal (1).png",
         "فيصل كربه": "/Team_pics/faysal (1).png",
-        "Nataly Rodríguez": "/Team_pics/Nataly Rodríguez  - Brand manager .png",
-        "ناتالي رودريغيز": "/Team_pics/Nataly Rodríguez  - Brand manager .png",
+        "Nataly Rodríguez": "/Team_pics/nataly.png",
+        "ناتالي رودريغيز": "/Team_pics/nataly.png",
         "Mohammed Fakhrani": "/Team_pics/Mohammed Fakhrani - Frontend Developer 1.png",
         "محمد فخراني": "/Team_pics/Mohammed Fakhrani - Frontend Developer 1.png",
         "Mennatullah Assem": "/Team_pics/Menna1.png",
@@ -109,7 +109,7 @@ export default function TeamSection() {
                 {/* Carousel */}
                 <div
                     ref={scrollRef}
-                    className="team-scroll flex gap-6 overflow-x-auto pb-4"
+                    className="team-scroll flex gap-8 overflow-x-auto pb-12 pt-8 px-4 -mx-4 scroll-smooth"
                     dir={dir}
                 >
                     {teamMembers.map((member, i) => (

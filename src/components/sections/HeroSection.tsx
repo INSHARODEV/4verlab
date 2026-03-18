@@ -65,22 +65,29 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Hero Video Placeholder */}
-                    <div className="relative hidden lg:block h-[500px] animate-fade-in-up animate-float perspective-1000" style={{ animationDelay: "1.2s" }}>
+                        {/* Hero Video (Vertical Mobile Display Frame) */}
+                    <div className="relative hidden lg:flex justify-end animate-fade-in-up animate-float perspective-[1000px] pr-8" style={{ animationDelay: "1.2s" }}>
                         {/* Deep ambient background aura */}
-                        <div className="absolute -inset-10 bg-gradient-to-br from-primary/40 via-transparent to-cyan-500/30 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '4s' }} />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-primary/30 to-violet-600/20 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '6s' }} />
 
-                        <div className="relative h-full premium-card rounded-3xl overflow-hidden group border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.6)] transform-gpu transition-transform duration-700 hover:rotate-y-[-5deg] hover:rotate-x-[5deg]">
-                            {/* Inner Glass border reflection */}
-                            <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none z-20" />
+                        {/* Floating glass phone wrapper */}
+                        <div className="relative w-[340px] xl:w-[380px] aspect-[9/16] rounded-[2.5rem] p-2 bg-white/5 border border-white/20 shadow-[0_40px_80px_rgba(0,0,0,0.8),inset_0_0_20px_rgba(255,255,255,0.1)] backdrop-blur-xl transform-gpu transition-transform duration-700 hover:rotate-y-[-8deg] hover:rotate-x-[5deg] group hover:-translate-y-4">
+                            {/* Inner Screen Container */}
+                            <div className="relative w-full h-full rounded-[2.1rem] overflow-hidden bg-black/50 border border-white/10 z-10">
+                                <video
+                                    src="/hero-vertical.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover rounded-[2rem] transition-transform duration-1000 group-hover:scale-[1.05]"
+                                />
+                                {/* Bottom vignette for depth */}
+                                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                            </div>
 
-                            <iframe
-                                src="https://www.youtube.com/embed/gvtos8V2vUc?autoplay=1&mute=1&loop=1&playlist=gvtos8V2vUc&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"
-                                title="Hero Video"
-                                className="w-full h-full rounded-3xl p-1 transition-transform duration-1000 group-hover:scale-[1.03] opacity-90 group-hover:opacity-100 z-10 relative pointer-events-none"
-                                allow="autoplay; encrypted-media"
-                                frameBorder="0"
-                            />
+                            {/* Floating highlight reflection */}
+                            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-white/20 to-transparent rounded-[2.5rem] opacity-30 pointer-events-none mix-blend-overlay" />
                         </div>
                     </div>
                 </div>

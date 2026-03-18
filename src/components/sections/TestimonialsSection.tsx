@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
 
         {/* Main Testimonial Display */}
         <div className="relative max-w-6xl mx-auto mb-16 perspective-[2000px]">
-          <div className="relative h-[700px] md:h-[550px]" style={{ transformStyle: 'preserve-3d' }}>
+          <div className="relative h-[800px] md:h-[650px] lg:h-[600px]" style={{ transformStyle: 'preserve-3d' }}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -289,7 +289,7 @@ export default function TestimonialsSection() {
                         </motion.blockquote>
 
                         {/* Results */}
-                        <div className="grid grid-cols-1 gap-4 mb-10">
+                        <div className="grid grid-cols-1 gap-4">
                           {testimonialsData[currentIndex].results.map((result: string, i: number) => (
                             <motion.div
                               key={i}
@@ -305,22 +305,6 @@ export default function TestimonialsSection() {
                             </motion.div>
                           ))}
                         </div>
-
-                        {/* Action Buttons */}
-                        <motion.div
-                          className="flex flex-wrap items-center justify-center gap-6 mt-8"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.8, duration: 0.6 }}
-                        >
-                          <motion.button
-                            onClick={() => openModal('website')}
-                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold transition-all shadow-lg shadow-primary/20 w-full sm:w-auto hover:bg-primary-dark hover:scale-[1.02] active:scale-[0.98]"
-                          >
-                            <Sparkles className="w-5 h-5 text-pink-100" />
-                            <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
-                          </motion.button>
-                        </motion.div>
                       </div>
                     </div>
                   </div>
