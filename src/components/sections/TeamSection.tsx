@@ -23,6 +23,8 @@ export default function TeamSection() {
         "عفاف شوا": "/Team_pics/afaf 1.png",
         "Faysal Kurbeh": "/Team_pics/faysal (1).png",
         "فيصل كربه": "/Team_pics/faysal (1).png",
+        "Nataly Rodríguez": "/Team_pics/Nataly Rodríguez  - Brand manager .png",
+        "ناتالي رودريغيز": "/Team_pics/Nataly Rodríguez  - Brand manager .png",
         "Mohammed Fakhrani": "/Team_pics/Mohammed Fakhrani - Frontend Developer 1.png",
         "محمد فخراني": "/Team_pics/Mohammed Fakhrani - Frontend Developer 1.png",
         "Mennatullah Assem": "/Team_pics/Menna1.png",

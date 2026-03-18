@@ -127,8 +127,9 @@ export const translations = {
             title: "Proven Team",
             description: "Ready to launch the first of its kind retail experience in Saudi Arabia.",
             members: [
-                { name: "Ghaith Almasri", role: "Senior Manager" },
                 { name: "Osama Basha", role: "Managing Partner" },
+                { name: "Nataly Rodríguez", role: "Brand Manager" },
+                { name: "Ghaith Almasri", role: "Senior Manager" },
                 { name: "Afaf Shawwa", role: "Senior Manager" },
                 { name: "Faysal Kurbeh", role: "Business Dev Manager" },
                 { name: "Mennatullah Assem", role: "Graphic Designer" },
@@ -345,8 +346,9 @@ export const translations = {
             title: "فريق معتمد",
             description: "جاهزون لإطلاق أول تجربة بيع بالتجزئة من نوعها في المملكة العربية السعودية.",
             members: [
-                { name: "غيث المصري", role: "مدير أول" },
                 { name: "أسامة باشا", role: "شريك إداري" },
+                { name: "ناتالي رودريغيز", role: "مديرة العلامة التجارية" },
+                { name: "غيث المصري", role: "مدير أول" },
                 { name: "عفاف شوا", role: "مدير أول" },
                 { name: "فيصل كربه", role: "مدير تطوير الأعمال" },
                 { name: "منة الله عاصم", role: "مصمم جرافيك" },
