@@ -26,7 +26,6 @@ export default function Home() {
       <PodcastSection />
       <TeamSection />
       <MapSection />
-      <OpenPositionsSection />
       <CalendlySection />
       {/* <ServicesSection /> */}
       {/* <FocusRailSection /> */}

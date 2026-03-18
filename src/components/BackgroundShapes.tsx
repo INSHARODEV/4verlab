@@ -155,18 +155,7 @@ export const BackgroundShapes = () => {
         style={{ top: '10%', right: '-10%' }}
       />
 
-      {/* Animated Cyber Grid Overlay */}
-      <motion.div
-        animate={{
-          backgroundPosition: ["0px 0px", "0px 64px"]
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_80%,transparent_100%)] opacity-80"
-      />
+
 
       {/* Subtle Vertical Scanline */}
       <motion.div
