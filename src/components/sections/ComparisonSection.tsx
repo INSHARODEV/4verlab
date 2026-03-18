@@ -22,7 +22,7 @@ export default function ComparisonSection() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white via-primary to-cyan-400 drop-shadow-[0_0_15px_rgba(48,140,140,0.5)]">
+          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white via-primary to-cyan-400 drop-shadow-[0_0_15px_rgba(226,53,118,0.5)]">
             {t.benefits.title}
           </h2>
         </div>
@@ -70,7 +70,7 @@ export default function ComparisonSection() {
         <div className="mt-16 text-center group">
           <a
             href="#calendly"
-            className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-white bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(48,140,140,0.3)] hover:-translate-y-1 group"
+            className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-white bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(226,53,118,0.3)] hover:-translate-y-1 group"
           >
             {/* Shimmer sweep */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none" />

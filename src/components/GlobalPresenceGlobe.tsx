@@ -76,7 +76,7 @@ export default function GlobalPresenceGlobe() {
                 arcAltitudeAutoScale={0.3}
 
                 // Atmosphere
-                atmosphereColor="#308C8C"
+                atmosphereColor="#e23576"
                 atmosphereAltitude={0.2}
 
                 // Labels 

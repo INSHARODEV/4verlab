@@ -22,11 +22,11 @@ export default function CTAButton({
 
     const variants = {
         primary:
-            "bg-gradient-to-r from-primary to-cyan-500 text-white hover:from-cyan-400 hover:to-primary hover:shadow-[0_0_50px_rgba(48,140,140,0.8)] shadow-[0_0_30px_rgba(48,140,140,0.4)] hover:-translate-y-1 hover:scale-110 group",
+            "bg-gradient-to-r from-primary to-cyan-500 text-white hover:from-cyan-400 hover:to-primary hover:shadow-[0_0_50px_rgba(226,53,118,0.8)] shadow-[0_0_30px_rgba(226,53,118,0.4)] hover:-translate-y-1 hover:scale-110 group",
         secondary:
             "bg-surface text-foreground hover:bg-surface/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] border border-white/10 hover:border-white/30 hover:-translate-y-1 hover:scale-105 group",
         outline:
-            "border-2 border-primary/50 text-white hover:border-cyan-400 hover:text-cyan-50 hover:shadow-[0_0_40px_rgba(48,140,140,0.6)] hover:-translate-y-1 hover:scale-105 hover:bg-primary/10 group",
+            "border-2 border-primary/50 text-white hover:border-cyan-400 hover:text-cyan-50 hover:shadow-[0_0_40px_rgba(226,53,118,0.6)] hover:-translate-y-1 hover:scale-105 hover:bg-primary/10 group",
         dark:
             "bg-surface-dark text-white hover:bg-black hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:-translate-y-1 hover:scale-105 group",
     };

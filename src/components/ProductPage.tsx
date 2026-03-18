@@ -49,7 +49,7 @@ const ProductPage: React.FC<ProductPageProps> = ({
                         <span>{isAr ? "العودة للرئيسية" : "Back to Home"}</span>
                     </Link>
                     <div className="text-xl font-bold tracking-tighter">
-                        .exefai <span className="text-primary">/ {isAr ? accentTitle.ar : accentTitle.en}</span>
+                        .4verlab <span className="text-primary">/ {isAr ? accentTitle.ar : accentTitle.en}</span>
                     </div>
                 </div>
             </nav>
@@ -198,8 +198,8 @@ const ProductPage: React.FC<ProductPageProps> = ({
 
             <footer className="py-10 px-6 border-t border-border text-center text-muted-foreground text-sm">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div>{isAr ? "© ٢٠٢٥ إكسفاي. جميع الحقوق محفوظة." : "© 2025 exefai. All rights reserved."}</div>
-                    <div className="font-bold tracking-tighter">.exefai</div>
+                    <div>{isAr ? "© ٢٠٢٥ فور إيفر لاب. جميع الحقوق محفوظة." : "© 2025 4ver Lab. All rights reserved."}</div>
+                    <div className="font-bold tracking-tighter">.4verlab</div>
                     <div className="flex gap-6">
                         <Link href="/privacy-and-policy" className="hover:text-primary transition-colors">{isAr ? "سياسة الخصوصية" : "Privacy Policy"}</Link>
                         <Link href="/mvp-development" className="hover:text-primary transition-colors">{isAr ? "تطوير التطبيقات" : "MVP Development"}</Link>

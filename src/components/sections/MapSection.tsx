@@ -25,7 +25,7 @@ export default function MapSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-primary to-cyan-400 drop-shadow-[0_0_15px_rgba(48,140,140,0.5)]"
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-primary to-cyan-400 drop-shadow-[0_0_15px_rgba(226,53,118,0.5)]"
                     >
                         {t.map.title}
                     </motion.h2>

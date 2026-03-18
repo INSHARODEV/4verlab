@@ -39,7 +39,7 @@ export const BackgroundShapes = () => {
           y: mouseY,
           translateX: "-50%",
           translateY: "-50%",
-          background: "radial-gradient(circle, rgba(48,140,140,0.5) 0%, rgba(0,0,0,0) 70%)",
+          background: "radial-gradient(circle, rgba(226,53,118,0.5) 0%, rgba(0,0,0,0) 70%)",
         }}
       />
 
@@ -71,7 +71,7 @@ export const BackgroundShapes = () => {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="absolute w-[450px] h-[450px] bg-[#308C8C]/15 rounded-full blur-[130px] mix-blend-screen"
+        className="absolute w-[450px] h-[450px] bg-primary/15 rounded-full blur-[130px] mix-blend-screen"
       />
 
       {/* Deep Space Background Accent */}
@@ -101,7 +101,7 @@ export const BackgroundShapes = () => {
             delay: Math.random() * 10,
             ease: "easeInOut",
           }}
-          className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_12px_2px_rgba(48,140,140,0.9)]"
+          className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_12px_2px_rgba(226,53,118,0.9)]"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -135,7 +135,7 @@ export const BackgroundShapes = () => {
           repeatDelay: 6,
           ease: "easeInOut"
         }}
-        className="absolute w-[250px] h-[1px] bg-gradient-to-r from-transparent via-primary/80 to-transparent rotate-[25deg] transform origin-left shadow-[0_0_15px_rgba(48,140,140,1)]"
+        className="absolute w-[250px] h-[1px] bg-gradient-to-r from-transparent via-primary/80 to-transparent rotate-[25deg] transform origin-left shadow-[0_0_15px_rgba(226,53,118,1)]"
         style={{ top: '20%', left: '-10%' }}
       />
 

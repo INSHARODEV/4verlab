@@ -57,7 +57,7 @@ export default function PodcastSection() {
                                 {t.podcast.platforms.map((name, index) => (
                                     <Link href="#contact" key={name}>
                                         <div className={`flex items-center gap-4 hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/5 rounded-xl p-1 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                                            <div className="p-3 rounded-xl bg-primary/10 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(48,140,140,0.3)]">
+                                            <div className="p-3 rounded-xl bg-primary/10 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(226,53,118,0.3)]">
                                                 {icons[index]}
                                             </div>
                                             <div className={isRtl ? 'text-right' : 'text-left'}>
@@ -103,7 +103,7 @@ export default function PodcastSection() {
                             </div>
                             <Link href="https://x.com/insharo_sa" target="_blank">
                                 <motion.div
-                                    className={`inline-flex items-center ${isRtl ? 'justify-end pr-6' : 'justify-start pl-6'} gap-4 rounded-full p-2 transition-all bg-primary/10 text-foreground hover:bg-primary/20 cursor-pointer border border-primary/20 hover:border-primary/40 hover:shadow-[0_0_25px_rgba(48,140,140,0.15)]`}
+                                    className={`inline-flex items-center ${isRtl ? 'justify-end pr-6' : 'justify-start pl-6'} gap-4 rounded-full p-2 transition-all bg-primary/10 text-foreground hover:bg-primary/20 cursor-pointer border border-primary/20 hover:border-primary/40 hover:shadow-[0_0_25px_rgba(226,53,118,0.15)]`}
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.98 }}
                                 >

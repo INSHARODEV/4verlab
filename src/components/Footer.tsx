@@ -18,7 +18,7 @@ export default function Footer() {
     ];
 
     const partnerLinks = [
-        { href: "https://exefai.com", label: language === 'ar' ? "إكسفاي" : "exefai" },
+        { href: "/", label: language === 'ar' ? "فور إيفر لاب" : "4ver Lab" },
         { href: "https://superstudios.ai", label: language === 'ar' ? "سوبر ستوديوز للذكاء الاصطناعي" : "Super Studios AI" },
     ];
 
@@ -37,8 +37,8 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="space-y-6 md:col-span-1 col-span-2">
                         <Image
-                            src="/images/exefai.png"
-                            alt="exefai"
+                            src="/images/4verlablogo.png"
+                            alt="4ver Lab"
                             width={180}
                             height={26}
                             className="h-8 w-auto"

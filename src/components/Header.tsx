@@ -45,8 +45,8 @@ export default function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:brightness-110">
                         <Image
-                            src="/images/exefai.png"
-                            alt="exefai"
+                            src="/images/4verlablogo.png"
+                            alt="4ver Lab"
                             width={180}
                             height={26}
                             priority

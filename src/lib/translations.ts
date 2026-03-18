@@ -1,454 +1,418 @@
 export const translations = {
     en: {
         metadata: {
-            title: "AI Collections & ZATCA Payroll Agent Saudi Arabia | exefai",
-            description: "Automate collections recovery (30% faster), ZATCA payroll compliance, Saudization tracking with AI agents built for KSA businesses. Riyadh-based support. Free demo.",
+            title: "4ver Lab | Personalized Science 4 YOUR Skin",
+            description: "The first personalized skincare lab in MENA. AI skin scans, expert formulation, and monthly subscription routines designed for your unique skin.",
         },
         nav: {
-            products: "Products",
-            solutions: "Solutions",
-            impact: "Impact",
+            products: "The Experience",
+            solutions: "The Lab",
+            impact: "Philosophy",
             team: "Team",
-            careers: "Careers",
+            careers: "Audience",
             contact: "Contact",
-            demo: "Book a free 30-minute demo",
-            chatWithUs: "Chat with us",
-            whatsappMessage: "Hello, I would like to learn more about exefai",
+            demo: "Book a Skin Scan",
+            chatWithUs: "Chat with a Skin Expert",
+            whatsappMessage: "Hello, I want to learn more about my personalized skin routine at 4ver Lab",
         },
         hero: {
-            tag: "AI AUTOMATION • APPS • WEBSITES • GEO-OPTIMIZED",
-            title: "Build, Automate, and Scale Your Digital Operations in Saudi Arabia",
-            description: "exefai designs AI agents, custom web & mobile apps, and GEO-optimized websites that automate business processes and drive growth for companies in Riyadh, Jeddah, Dammam, and across KSA.",
+            tag: "PERSONALIZED • SCIENTIFIC • KOREAN-ENGINEERED",
+            title: "Personalized Science 4 YOUR Skin",
+            description: "THE FIRST PERSONALIZED SKINCARE LAB IN MENA. Every customer begins with a quick skin scan to unlock a routine that turns skincare into a lifestyle, not just a purchase.",
             benefits: [
-                "AI Agents for Business Processes",
-                "High-Converting Web & Mobile Apps",
-                "SEO/GEO Websites for Saudi Markets",
+                "Real-time AI Facial Analysis",
+                "Personalized Routine Recommendation",
+                "Monthly Subscription Delivered to You",
             ],
-            cta: "BOOK FREE 30-MIN STRATEGY CALL",
+            cta: "BOOK YOUR FREE SCAN NOW",
         },
         logos: {
-            heading: "Trusted by these companies",
+            heading: "Validated by Experts & Innovation Hubs",
         },
         benefits: {
-            title: "What exefai Delivers for Saudi Businesses",
-            headers: ["Feature", "Benefit"],
+            title: "The Experience Flow",
+            headers: ["Step", "What Happens"],
             data: [
-                { feature: "Saudi Billing", benefit: "84% CTC savings via AI" },
-                { feature: "Arabic Contracts", benefit: "Native Arabic document generation" },
-                { feature: "AI Collections Agent", benefit: "35% faster recovery (WhatsApp)" },
-                { feature: "ZATCA Payroll Automation", benefit: "Phase 2 compliant, zero penalties" },
-                { feature: "GEO-SEO Websites", benefit: "#1 KSA local search rankings" },
-                { feature: "Custom Web/Mobile Apps", benefit: "Delivered in 4-6 weeks" },
-                { feature: "WhatsApp Business Bots", benefit: "90%+ open rates, AI conversations" },
-                { feature: "Full Tech Stack Builds", benefit: "End-to-end under one roof" },
+                { feature: "1. Quick Scan", benefit: "Digital system for real-time facial analysis" },
+                { feature: "2. Education", benefit: "Lab-coat staff explain your unique skin results" },
+                { feature: "3. Formulation", benefit: "Experts create a formula based on your scan" },
+                { feature: "4. Subscription", benefit: "Monthly deliveries with lifestyle tracking" },
+                { feature: "High-Tech", benefit: "Korean-engineered diagnostic technology" },
+                { feature: "Premium", benefit: "Minimalist layout for a luxury feel" },
+                { feature: "Immersive", benefit: "Inward-flowing booth design for shoppers" },
+                { feature: "Sustainable", benefit: "Climate-engineered materials for MENA heat" },
             ],
-            cta: "Everything AI that Saudi businesses need in one platform",
+            cta: "Skincare becomes a lifestyle, not just a purchase.",
         },
         featuresBento: {
-            badge: "✨ Enterprise AI",
-            title: "Top-Tier",
-            titleAccent: "AI Automation",
-            description: "We don't just build software. We engineer autonomous agents that scale your business 24/7.",
+            badge: "✨ Design Philosophy",
+            title: "Glassy White &",
+            titleAccent: "Industrial Finishes",
+            description: "Our 3×3 SQM booth is an immersive pass-through counter designed to evoke trust, science, and a premium luxury feel.",
             cards: [
                 {
-                    title: "Conversational AI Agents",
-                    description: "Deploy human-like AI on WhatsApp & Voice to handle customer support, sales, and collections autonomously.",
-                    metric: "24/7",
-                    metricLabel: "Operations"
+                    title: "High-Tech Face Machine",
+                    description: "High-tech face scan system for a real-time facial analysis and precision diagnostic results.",
+                    metric: "Scan",
+                    metricLabel: "Digital"
                 },
                 {
-                    title: "Intelligent Workflows",
-                    description: "Connect your entire tech stack. Our agents trigger actions across CRM, ERP, and payment gateways instantly.",
-                    metric: "10x",
-                    metricLabel: "Faster Execution"
+                    title: "Educational Stand",
+                    description: "Comprehensive skin care education provided by expert staff to explain your results.",
+                    metric: "1:1",
+                    metricLabel: "Expert Advice"
                 },
                 {
-                    title: "Custom LLM Solutions",
-                    description: "We train specialized models on your company data for perfectly accurate, context-aware business intelligence.",
-                    metric: "99%",
-                    metricLabel: "Accuracy"
+                    title: "Minimalist Layout",
+                    description: "A booth that invites shoppers with glassy white and industrial finishes evoking trust.",
+                    metric: "3x3",
+                    metricLabel: "Compact Luxury"
                 }
             ]
         },
         impactMetrics: {
-            title: "The exefai Impact",
+            title: "Why it Matters",
             metrics: [
-                { value: "500", suffix: "k+", label: "Process Hours Saved" },
-                { value: "98", suffix: "%", label: "Automation Accuracy" },
-                { value: "10", suffix: "x", label: "ROI for Clients" },
-                { value: "24", suffix: "/7", label: "Active AI Agents" }
+                { value: "0", suffix: "%", label: "Generic Products" },
+                { value: "100", suffix: "%", label: "Personalized Formula" },
+                { value: "24", suffix: "/7", label: "Skin Support" },
+                { value: "6", suffix: "m", label: "Launch Pilot" }
             ]
         },
         testimonials: {
-            badge: "✨ Our Products",
-            title: "Discover",
-            titleAccent: "Our Products",
-            description: "Explore our suite of AI agents built specifically for Saudi businesses, automating your operations around the clock.",
-            watchVideo: "Watch Video",
-            viewCaseStudy: "View Case Study",
-            learnMore: "Learn More", // Added learnMore key
+            badge: "✨ Hero Product",
+            title: "More than Skincare,",
+            titleAccent: "A Collector's Piece",
+            description: "A subscription box engineered to withstand heat climate. Featuring 4 mini lab-style bottles in a Dyson-like design case.",
+            watchVideo: "Unboxing Ritual",
+            viewCaseStudy: "Box Design",
+            learnMore: "The Subscription", 
             data: [
                 {
-                    name: "Collections Agent",
-                    role: "Mueen",
-                    iframe: "https://www.loom.com/embed/5d710d17da9a4c94a9d84719be6648ea",
-                    url: "/products/mueen-collections-agent",
-                    text: "AI handles reminders and recovery via WhatsApp. Frees cash for KSA businesses—no more chasing invoices.",
-                    results: ["Automated WhatsApp Reminders", "Cash flow optimization", "No more chasing invoices"]
+                    name: "The Scan",
+                    role: "Real-time Analysis",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder for actual video
+                    url: "/",
+                    text: "Every customer begins with a quick skin scan. The digital system provides real-time facial analysis for a precision routine.",
+                    results: ["Digital Skin Scan", "Immediate Results", "Expert Explanation"]
                 },
                 {
-                    name: "Payroll Agent",
-                    role: "Ameen",
-                    iframe: "https://www.loom.com/embed/ca63a02ef7db47e4a24a1c831584ac28",
-                    url: "/products/ameen-payroll-agent",
-                    text: "ZATCA/GOSI automation for SMEs. Ends manual errors and fines across any shift operation.",
-                    results: ["ZATCA/GOSI automation", "Zero manual errors", "Shift operation support"]
+                    name: "The Box",
+                    role: "Premium Ritual",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    url: "/",
+                    text: "4 mini lab-style bottles arranged vertically in a sleek numbered Dyson-like case. Available in Bone White, Graphite Black, and Forest Green.",
+                    results: ["Heat Resistant Setup", "Collector's Piece", "Sleek Industrial Finish"]
                 },
                 {
-                    name: "Medical GEO Agent",
-                    role: "Hadi",
-                    iframe: "https://www.loom.com/embed/b1993f26b3ca4b20851b483ea63f5822",
-                    url: "/products/hadi-medical-geo-agent",
-                    text: "LLM SEO for Saudi clinics/pharmacies. Gets you found in AI answers for patients searching Arabic health queries.",
-                    results: ["LLM SEO optimization", "Dominates AI answers", "Arabic queries support"]
+                    name: "The Plan",
+                    role: "Phase 1 Pilot",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    url: "/",
+                    text: "Low risk, high visibility 3x3 SQM booth in prime mall locations. Validating concept and generating PR buzz from day one.",
+                    results: ["Mall Placement", "Market Validation", "PR & Influencer Buzz"]
                 }
             ]
         },
         podcast: {
             badge: "Coming Soon",
-            title: ".exefai podcast",
-            description: "Stay tuned for the .exefai podcast where we dive deep into the tech world. We meet with our partners, entrepreneurs, and more.",
+            title: ".4ver lab channel",
+            description: "Stay tuned for our lifestyle channel where we dive deep into skin science and Korean beauty trends.",
             launchingSoon: "Launching Soon",
             availableOn: "Available on",
-            platforms: ["Apple Podcasts", "YouTube", "Spotify"],
-            twitterSpace: "Twitter Spaces",
+            platforms: ["Instagram", "YouTube", "TikTok"],
+            twitterSpace: "Live Q&A",
         },
         team: {
-            title: "Our team",
-            description: "Get to know the exceptional individuals who power exefai's success",
+            title: "Proven Team",
+            description: "Ready to launch the first of its kind retail experience in Saudi Arabia.",
             members: [
-                { name: "Osama Basha", role: "Managing Partner" },
-                { name: "Ghaith Almasri", role: "Senior Manager" },
-                { name: "Afaf Shawwa", role: "Senior Manager" },
-                { name: "Faysal Kurbeh", role: "Business Development Manager" },
-                { name: "Mohammed Fakhrani", role: "Full-stack Developer" },
-                { name: "Mennatullah Assem", role: "Graphic Designer" },
-                { name: "Fady Essam", role: "HR Recruitment Specialist" },
-                { name: "Farida Dahshan", role: "Digital Marketing Specialist" },
-                { name: "Martina Medhat", role: "Business Development" },
-                { name: "Nour Almohamade", role: "Sales Development Representative" },
-                { name: "Mohammed Abbas", role: "Security Operations Auditor" },
-                { name: "Yasser Basha", role: "Business Development Manager" },
-                { name: "Yosef Elwardany", role: "Senior Accountant" },
+                { name: "Founder", role: "Successful US Retail Exit" },
+                { name: "Core Team", role: "Experts in Design & Tech" },
+                { name: "Advisors", role: "Korean Skincare Engineers" },
             ]
         },
         map: {
-            title: "Global Presence",
-            subtitle: "Bringing our worldwide experience to deliver cutting-edge AI solutions directly to Saudi Arabia.",
+            title: "Phased Rollout",
+            subtitle: "From Pilot to Permanent Destination. Scaling the innovation beyond one location.",
             markets: {
-                title: "Our Markets",
+                title: "Planned Locations",
                 regions: [
-                    { id: "ca", name: "CA", flag: "🇨🇦" },
-                    { id: "usa", name: "USA", flag: "🇺🇸" },
-                    { id: "uae", name: "UAE", flag: "🇦🇪" },
-                    { id: "ksa", name: "KSA", flag: "🇸🇦" },
+                    { id: "pilot", name: "Pilot Booth", flag: "🧪" },
+                    { id: "flagship", name: "Flagship Store", flag: "🏛️" },
+                    { id: "ksa", name: "Saudi Arabia", flag: "🇸🇦" },
+                    { id: "korea", name: "South Korea", flag: "🇰🇷" },
                 ]
             },
             offices: {
-                title: "Our Offices",
+                title: "Phases",
                 locations: [
                     {
-                        name: "Bogota, Colombia",
-                        desc: "This office serves our partners in the North American market operating in EST time",
-                        flag: "🇨🇴"
+                        name: "Phase 1: Booth",
+                        desc: "Compact 3×3 SQM booth in prime mall location for a six-month pilot.",
+                        flag: "📍"
                     },
                     {
-                        name: "Istanbul, Turkiye",
-                        desc: "This office serves our partners in UAE and KSA operating in GMT+3 time",
-                        flag: "🇹🇷"
+                        name: "Phase 2: Flagship",
+                        desc: "Expand into a full retail store after a successful pilot anchoring mall innovation.",
+                        flag: "🚀"
                     },
                     {
-                        name: "Cairo, Egypt",
-                        desc: "This office serves our partners in KSA and UAE with dedicated Arabic-speaking support",
-                        flag: "🇪🇬"
+                        name: "The Vision",
+                        desc: "Not another cosmetic counter. A trendsetting innovation hub attracting lifestyle shoppers.",
+                        flag: "✨"
                     }
                 ]
             }
         },
         jobs: {
-            title: "Open positions",
-            cta: "Apply Now",
+            title: "Target Customer",
+            cta: "Learn More",
             locations: {
-                egypt: "Egypt",
-                remote: "Remote",
+                egypt: "Unisex",
+                remote: "Lifestyle",
             },
             data: [
                 {
-                    title: 'HR Recruiter Specialist',
-                    description: 'We are a dynamic and innovative company specializing in Business Consulting and Digital Solutions that partners and in-house projects with organizations to achieve growth, efficiency, and sustainable success.',
+                    title: 'Gym Goers',
+                    description: 'Health-conscious individuals who value skincare as part of their wellness routine.',
                 },
                 {
-                    title: 'Video Editor',
-                    description: 'We are a dynamic and innovative company specializing in Business Consulting and Digital Solutions that partners and in-house projects with organizations to achieve growth, efficiency, and sustainable success.',
+                    title: 'Wellness Seekers',
+                    description: 'Enthusiasts following multi-step routines and looking for premium experiences.',
                 },
                 {
-                    title: 'Frontend Developer',
-                    description: 'We are looking for a skilled Frontend Developer to join our team. The ideal candidate will be responsible for building the client-side of our web applications.',
+                    title: 'Tech-Savvy Millennials',
+                    description: 'Attracted to innovative packaging, digital scans, and Instagrammable moments.',
                 },
                 {
-                    title: 'Backend Developer',
-                    description: 'We are looking for a skilled Backend Developer to join our team. The ideal candidate will be responsible for the server-side of our web applications.',
-                },
-                {
-                    title: 'UI/UX Designer',
-                    description: 'We are looking for a talented UI/UX Designer to create amazing user experiences. The ideal candidate should have an eye for clean and artful design.',
-                },
-                {
-                    title: 'Project Manager',
-                    description: 'We are seeking an experienced Project Manager to lead our projects to success. The ideal candidate will have a proven track record of managing projects from conception to completion.',
+                    title: 'Lifestyle Shoppers',
+                    description: 'Highly active on social media and responsive to premium global trends.',
                 },
             ]
         },
         calendly: {
-            badge: "Schedule a Meeting",
-            title: "Ready to book a call?",
-            subtitle: "Pick a time that works for you",
+            badge: "Book Your Slot",
+            title: "Ready for your scan?",
+            subtitle: "Pick a time for your digital skin analysis",
         },
         footer: {
-            description: "Exefai offers AI automation agents for collections recovery, ZATCA payroll, and Saudization tracking, specifically designed for businesses in Saudi Arabia.",
+            description: "4ver Lab is the first personalized skincare lab in Saudi Arabia, combining Korean-engineered technology with luxury design for your unique ritual.",
             sections: {
-                company: "Company",
-                ventures: "Our Ventures",
-                contact: "Get in Touch",
+                company: "Brand",
+                ventures: "Our Tech",
+                contact: "Join the Lab",
             },
-            copyright: "© {year} exefai. All rights reserved.",
-            businessInfo: "Commercial Register",
+            copyright: "© {year} 4ver Lab. All rights reserved.",
+            businessInfo: "Personalized Science",
         }
     },
     ar: {
         metadata: {
-            title: "إكسفاي | تحصيل الديون والرواتب بالذكاء الاصطناعي في السعودية",
-            description: "أتمتة تحصيل الديون (أسرع بنسبة 30%)، والالتزام بنظام حماية الأجور، ومتابعة التوطين عبر وكلاء ذكاء اصطناعي مصممين للشركات السعودية. دعم من قلب الرياض. اطلب تجربة مجانية الآن.",
+            title: "4ver Lab | علم مخصص لبشرتك",
+            description: "أول مختبر للعناية بالبشرة مخصص في منطقة الشرق الأوسط وشمال أفريقيا. مسح جلدي بالذكاء الاصطناعي، وتركيبات خبراء، وروتين اشتراك شهري مصمم لبشرتك الفريدة.",
         },
         nav: {
-            products: "منتجاتنا",
-            solutions: "حلولنا",
-            impact: "تأثيرنا",
-            team: "فريقنا",
-            careers: "وظائف",
+            products: "التجربة",
+            solutions: "المختبر",
+            impact: "فلسفتنا",
+            team: "الفريق",
+            careers: "الجمهور",
             contact: "تواصل معنا",
-            demo: "احجز عرضاً تجريبياً مجانياً",
-            chatWithUs: "تحدث معنا",
-            whatsappMessage: "مرحباً، أود معرفة المزيد عن إكسفاي",
+            demo: "احجز فحصاً للبشرة",
+            chatWithUs: "تحدث مع خبير",
+            whatsappMessage: "مرحباً، أود معرفة المزيد عن روتين بشرتي المخصص في 4ver Lab",
         },
         hero: {
-            tag: "أتمتة بالذكاء الاصطناعي • تطبيقات • مواقع • تحسين جغرافي",
-            title: "ابنِ، أتمت وتوسع بعملياتك الرقمية في المملكة العربية السعودية",
-            description: "تصمم إكسفاي وكلاء ذكاء اصطناعي، وتطبيقات مخصصة، ومواقع محسنة جغرافياً تؤتمت العمليات وتدفع عجلة النمو للشركات في الرياض، جدة، الدمام، وجميع أنحاء المملكة.",
+            tag: "مخصص • علمي • هندسة كورية",
+            title: "علم مخصص لبشرتك",
+            description: "أول مختبر للعناية بالبشرة مخصص في الشرق الأوسط. تبدأ رحلة كل عميل بمسح سريع للبشرة للحصول على روتين يحول العناية بالبشرة إلى نمط حياة.",
             benefits: [
-                "وكلاء ذكاء اصطناعي للعمليات",
-                "تطبيقات ويب وجوال عالية التحويل",
-                "مواقع (SEO) محسنة للسوق السعودي",
+                "تحليل فوري للوجه بالذكاء الاصطناعي",
+                "توصيات مخصصة لروتينك اليومي",
+                "اشتراك شهري يصلك إلى منزلك",
             ],
-            cta: "احجز مكالمة استشارية مجانية (30 دقيقة)",
+            cta: "احجز فحصك المجاني الآن",
         },
         logos: {
-            heading: "موثوقون من قبل هذه الشركات",
+            heading: "معتمد من الخبراء ومراكز الابتكار",
         },
         benefits: {
-            title: "ما تقدمه إكسفاي للشركات السعودية",
-            headers: ["الميزة", "القيمة المضافة"],
+            title: "تدفق التجربة",
+            headers: ["الخطوة", "ماذا يحدث"],
             data: [
-                { feature: "أنظمة الفوترة السعودية", benefit: "توفير 84% من تكاليف العقود عبر الذكاء الاصطناعي" },
-                { feature: "عقود باللغة العربية", benefit: "إنشاء تلقائي للوثائق القانونية باللغة العربية" },
-                { feature: "وكيل تحصيل ذكي", benefit: "تحصيل أسرع بنسبة 35% عبر الواتساب" },
-                { feature: "أتمتة رواتب (زاتكا)", benefit: "متوافق مع المرحلة الثانية، ودون أي غرامات" },
-                { feature: "مواقع (SEO) جغرافية", benefit: "صدارة نتائج البحث المحلية في المملكة" },
-                { feature: "تطبيقات مخصصة", benefit: "تسليم كامل خلال 4 إلى 6 أسابيع فقط" },
-                { feature: "بوتات واتساب للأعمال", benefit: "معدل فتح 90%+ ومحادثات ذكية" },
-                { feature: "تطوير تقني متكامل", benefit: "حلول تقنية شاملة تحت سقف واحد" },
+                { feature: "١. فحص سريع", benefit: "نظام رقمي لتحليل الوجه في الوقت الفعلي" },
+                { feature: "٢. تعليم", benefit: "موظفون ببدلات مختبر يشرحون نتائج بشرتك الفريدة" },
+                { feature: "٣. التركيبة", benefit: "خبراء يبتكرون تركيبة بناءً على نتائج فحصك" },
+                { feature: "٤. الاشتراك", benefit: "توصيلات شهرية مع تتبع لنمط الحياة" },
+                { feature: "تقنية عالية", benefit: "تكنولوجيا تشخيصية بهندسة كورية" },
+                { feature: "ممتاز", benefit: "تخطيط بسيط لشعور بالرفاهية المطلقة" },
+                { feature: "غامر", benefit: "تصميم منصة غامر يرحب بالمتسوقين" },
+                { feature: "مستدام", benefit: "مواد مصممة هندسياً لمقاومة حرارة المنطقة" },
             ],
-            cta: "كل ما تحتاجه الشركات السعودية من حلول الذكاء الاصطناعي في منصة واحدة",
+            cta: "العناية بالبشرة تصبح نمط حياة، وليست مجرد عملية شراء.",
         },
         featuresBento: {
-            badge: "✨ ذكاء اصطناعي للمؤسسات",
-            title: "أتمتة",
-            titleAccent: "من الطراز الرفيع",
-            description: "نحن لا نبرمج بضع تطبيقات فقط، بل نهندس وكلاء ذكاء اصطناعي لرفع كفاءة أعمالك على مدار الساعة.",
+            badge: "✨ فلسفة التصميم",
+            title: "أبيض زجاجي و",
+            titleAccent: "تشطيبات صناعية",
+            description: "منصتنا بمساحة ٣×٣ متر مربع هي ركن غامر مصمم لإثارة الثقة والعلم والشعور بالفخامة المميزة.",
             cards: [
                 {
-                    title: "وكلاء محادثة ذكية",
-                    description: "أطلق وكلاء ذكاء اصطناعي على واتساب والصوت لإدارة الدعم، والمبيعات، والتحصيل بشكل ذاتي بالكامل.",
-                    metric: "24/7",
-                    metricLabel: "تشغيل متواصل"
+                    title: "آلة وجه تقنية",
+                    description: "نظام مسح وجه عالي التقنية لتحليل الوجه في الوقت الفعلي ونتائج تشخيص دقيقة.",
+                    metric: "فحص",
+                    metricLabel: "رقمي"
                 },
                 {
-                    title: "سير عمل ذكي",
-                    description: "اربط جميع أنظمتك. وكلاؤنا يتخذون إجراءات فورية عبر أنظمة إدارة علاقات العملاء وتخطيط الموارد.",
-                    metric: "10x",
-                    metricLabel: "تنفيذ أسرع"
+                    title: "منصة تعليمية",
+                    description: "تعليم شامل للعناية بالبشرة يقدمه موظفون خبراء لشرح نتائجك.",
+                    metric: "١:١",
+                    metricLabel: "نصيحة خبير"
                 },
                 {
-                    title: "نماذج لغوية مخصصة",
-                    description: "ندرب نماذج متخصصة على بيانات شركتك لتقديم ذكاء أعمال دقيق وملم بالسياق بشكل مثالي.",
-                    metric: "99%",
-                    metricLabel: "دقة عالية"
+                    title: "تخطيط بسيط",
+                    description: "منصة ترحب بالمتسوقين بأبيض زجاجي وتشطيبات صناعية تثير الثقة.",
+                    metric: "٣x٣",
+                    metricLabel: "فخامة مدمجة"
                 }
             ]
         },
         impactMetrics: {
-            title: "تأثير إكسفاي",
+            title: "لماذا يهم؟",
             metrics: [
-                { value: "500", suffix: "k+", label: "ساعة عمل موفرة" },
-                { value: "98", suffix: "%", label: "دقة الأتمتة" },
-                { value: "10", suffix: "x", label: "عائد الاستثمار للعملاء" },
-                { value: "24", suffix: "/7", label: "وكلاء أذكياء نشطون" }
+                { value: "0", suffix: "%", label: "منتجات عامة" },
+                { value: "100", suffix: "%", label: "تركيبة مخصصة" },
+                { value: "24", suffix: "/7", label: "دعم البشرة" },
+                { value: "6", suffix: "m", label: "إطلاق تجريبي" }
             ]
         },
         testimonials: {
-            badge: "✨ منتجاتنا",
-            title: "اكتشف",
-            titleAccent: "منتجاتنا",
-            description: "استكشف مجموعة وكلاء الذكاء الاصطناعي المصمّمة خصيصاً للشركات السعودية لأتمتة عملياتك على مدار الساعة.",
-            watchVideo: "شاهد الفيديو",
-            viewCaseStudy: "عرض دراسة الحالة",
-            learnMore: "اعرف المزيد", // Added learnMore key for Arabic
+            badge: "✨ المنتج البطل",
+            title: "أكثر من مجرد عناية،",
+            titleAccent: "قطعة للاقتناء",
+            description: "صندوق اشتراك مصمم لمقاومة المناخ الحار. يتميز بـ ٤ زجاجات صغيرة بأسلوب المختبر في حافظة بتصميم يشبه دايسون.",
+            watchVideo: "طقوس فتح الصندوق",
+            viewCaseStudy: "تصميم الصندوق",
+            learnMore: "الاشتراك", 
             data: [
                 {
-                    name: "وكيل التحصيل",
-                    role: "معين",
-                    iframe: "https://www.loom.com/embed/5d710d17da9a4c94a9d84719be6648ea",
-                    url: "/products/mueen-collections-agent",
-                    text: "يتولى الذكاء الاصطناعي مهام التذكير والتحصيل عبر الواتساب. يحرر التدفق النقدي للشركات السعودية - وداعاً لملاحقة الفواتير.",
-                    results: ["تذكير تلقائي عبر الواتساب", "تحسين التدفق النقدي", "إنهاء ملاحقة الفواتير"]
+                    name: "الفحص",
+                    role: "تحليل فوري",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    url: "/",
+                    text: "يبدأ كل عميل بمسح سريع للبشرة. يوفر النظام الرقمي تحليلاً فورياً للوجه لروتين دقيق.",
+                    results: ["مسح جلدي رقمي", "نتائج فورية", "شرح خبراء"]
                 },
                 {
-                    name: "وكيل الرواتب",
-                    role: "أمين",
-                    iframe: "https://www.loom.com/embed/ca63a02ef7db47e4a24a1c831584ac28",
-                    url: "/products/ameen-payroll-agent",
-                    text: "أتمتة هيئة الزكاة (زاتكا) والتأمينات الاجتماعية (GOSI) للشركات المتوسطة والصغيرة. ينهي الأخطاء والغرامات اليدوية عبر كافة الورديات.",
-                    results: ["أتمتة الزكاة والتأمينات", "أخطاء يدوية صفرية", "دعم نظام الورديات"]
+                    name: "الصندوق",
+                    role: "طقوس مميزة",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    url: "/",
+                    text: "٤ زجاجات صغيرة مرتبة عمودياً في حافظة مرقمة وأنيقة. متوفر بألوان الأبيض العظمي، والأسود الجرافيتي، والأخضر الغابي.",
+                    results: ["إعداد مقاوم للحرارة", "قطعة للاقتناء", "تشطيب صناعي أنيق"]
                 },
                 {
-                    name: "وكيل التوطين الطبي",
-                    role: "هادي",
-                    iframe: "https://www.loom.com/embed/b1993f26b3ca4b20851b483ea63f5822",
-                    url: "/products/hadi-medical-geo-agent",
-                    text: "تحسين محركات البحث المحلي (LLM SEO) للعيادات والصيدليات السعودية. يتصدر الإجابات الذكية للمرضى الباحثين باللغة العربية.",
-                    results: ["تحسين محركات البحث المحلي", "تصدر إجابات الذكاء الاصطناعي", "دعم الاستفسارات العربية"]
+                    name: "الخطة",
+                    role: "المرحلة الأولى",
+                    iframe: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    url: "/",
+                    text: "منصة منخفضة المخاطر وعالية الرؤية في مواقع رئيسية بالمولات. التحقق من المفهوم وإثارة ضجة إعلامية من اليوم الأول.",
+                    results: ["موقع في المول", "تحقق من السوق", "ضجة إعلامية ومؤثرين"]
                 }
             ]
         },
         podcast: {
             badge: "قريباً",
-            title: ".exefai podcast",
-            description: "ترقبوا .exefai podcast حيث نغوص في عالم التقنية. سنكشف عن أسرار النجاح مع شركائنا، ونستضيف باقة من ألمع رواد الأعمال.",
+            title: ".قناة 4ver lab",
+            description: "ترقبوا قناتنا الخاصة بنمط الحياة حيث نغوص عميقاً في علوم البشرة واتجاهات الجمال الكورية.",
             launchingSoon: "قريباً الإطلاق",
             availableOn: "متاح على",
-            platforms: ["آبل بودكاست", "يوتيوب", "سبوتيفاي"],
-            twitterSpace: "تويتر سبيس",
+            platforms: ["إنستغرام", "يوتيوب", "تيك توك"],
+            twitterSpace: "سؤال وجواب",
         },
         team: {
-            title: "فريقنا",
-            description: "تعرف على الكفاءات الاستثنائية التي تقود مسيرة نجاح إكسفاي",
+            title: "فريق معتمد",
+            description: "جاهزون لإطلاق أول تجربة بيع بالتجزئة من نوعها في المملكة العربية السعودية.",
             members: [
-                { name: "أسامة باشا", role: "شريك إداري" },
-                { name: "غيث المصري", role: "مدير أول" },
-                { name: "عفاف شوا", role: "مديرة أولى" },
-                { name: "فيصل كربه", role: "مدير تطوير أعمال" },
-                { name: "محمد فخراني", role: "مطور تطبيقات (Full Stack)" },
-                { name: "منة الله عاصم", role: "مصممة جرافيك" },
-                { name: "فادي عصام", role: "أخصائي استقطاب مواهب" },
-                { name: "فريدة دهشان", role: "أخصائية تسويق رقمي" },
-                { name: "مارتينا مدحت", role: "تطوير أعمال" },
-                { name: "نور المحمد", role: "ممثل تطوير مبيعات" },
-                { name: "محمد عباس", role: "مدقق عمليات أمنية" },
-                { name: "ياسر باشا", role: "مدير تطوير أعمال" },
-                { name: "يوسف الورداني", role: "محاسب أول" },
+                { name: "المؤسس", role: "خروج ناجح من سوق التجزئة الأمريكي" },
+                { name: "الفريق الأساسي", role: "خبراء في التصميم والتكنولوجيا" },
+                { name: "المستشارون", role: "مهندسو عناية بالبشرة كوريون" },
             ]
         },
         map: {
-            title: "حضورنا العالمي",
-            subtitle: "نسخّر خبراتنا العالمية لتقديم أحدث حلول الذكاء الاصطناعي مباشرة إلى قلب المملكة العربية السعودية.",
+            title: "التوسع المرحلي",
+            subtitle: "من تجربة رائدة إلى وجهة دائمة. توسيع الابتكار إلى ما وراء موقع واحد.",
             markets: {
-                title: "أسواقنا",
+                title: "المواقع المخططة",
                 regions: [
-                    { id: "ca", name: "كندا", flag: "🇨🇦" },
-                    { id: "usa", name: "أمريكا", flag: "🇺🇸" },
-                    { id: "uae", name: "الإمارات", flag: "🇦🇪" },
+                    { id: "pilot", name: "منصة تجريبية", flag: "🧪" },
+                    { id: "flagship", name: "متجر رئيسي", flag: "🏛️" },
                     { id: "ksa", name: "السعودية", flag: "🇸🇦" },
+                    { id: "korea", name: "كوريا الجنوبية", flag: "🇰🇷" },
                 ]
             },
             offices: {
-                title: "مكاتبنا",
+                title: "المراحل",
                 locations: [
                     {
-                        name: "بوغوتا، كولومبيا",
-                        desc: "يخدم هذا المكتب شركاءنا في سوق أمريكا الشمالية ويعمل بتوقيت شرق الولايات المتحدة (EST)",
-                        flag: "🇨🇴"
+                        name: "المرحلة ١: المنصة",
+                        desc: "منصة مدمجة ٣×٣ متر في موقع متميز بالمول لتجربة تجريبية مدتها ستة أشهر.",
+                        flag: "📍"
                     },
                     {
-                        name: "إسطنبول، تركيا",
-                        desc: "يخدم هذا المكتب شركاءنا في الإمارات والسعودية ويعمل بتوقيت غرينتش+٣",
-                        flag: "🇹🇷"
+                        name: "المرحلة ٢: المتجر الرئيسي",
+                        desc: "التوسع إلى متجر بيع بالتجزئة كامل بعد نجاح التجربة الرائدة.",
+                        flag: "🚀"
                     },
                     {
-                        name: "القاهرة، مصر",
-                        desc: "يخدم هذا المكتب شركاءنا في السعودية والإمارات بدعم مخصص باللغة العربية",
-                        flag: "🇪🇬"
+                        name: "الرؤية",
+                        desc: "ليست مجرد ركن تجميل آخر. مركز ابتكار يجذب متسوقي نمط الحياة.",
+                        flag: "✨"
                     }
                 ]
             }
         },
         jobs: {
-            title: "الوظائف المتاحة",
-            cta: "قدم الآن",
+            title: "الجمهور المستهدف",
+            cta: "اعرف المزيد",
             locations: {
-                egypt: "مصر",
-                remote: "عن بعد",
+                egypt: "للجنسين",
+                remote: "نمط حياة",
             },
             data: [
                 {
-                    title: 'أخصائي استقطاب مواهب (HR)',
-                    description: 'نحن شركة تقنية طموحة متخصصة في الاستشارات الإدارية والحلول الرقمية. نسعى لضم كفاءات تساهم في تحقيق النمو والتميز المستدام لشركائنا.',
+                    title: 'رواد النادي الرياضي',
+                    description: 'الأشخاص المهتمون بالصحة واللذين يقدرون العناية بالبشرة كجزء من روتين العافية.',
                 },
                 {
-                    title: 'محرر فيديو (Video Editor)',
-                    description: 'نبحث عن محرر فيديو مبدع يمتلك القدرة على تحويل الأفكار إلى قصص بصرية ملهمة تدعم هوية العلامة التجارية.',
+                    title: 'باحثو العافية',
+                    description: 'المتحمسون الذين يتبعون روتيناً متعدد الخطوات ويبحثون عن تجارب مميزة.',
                 },
                 {
-                    title: 'مطور واجهات أمامية (Frontend Developer)',
-                    description: 'نبحث عن مطور واجهات أمامية متمكن للانضمام إلى فريقنا. ستكون مسؤولاً عن بناء تجربة مستخدم سلسة وجذابة لتطبيقات الويب الخاصة بنا.',
+                    title: 'جيل الألفية المهتم بالتقنية',
+                    description: 'المنجذبون للتغليف المبتكر والمسح الرقمي واللحظات الجديرة بالنشر على إنستغرام.',
                 },
                 {
-                    title: 'مطور أنظمة خلفية (Backend Developer)',
-                    description: 'نبحث عن مطور أنظمة خلفية خبير لإدارة ومعالجة البيانات وضمان كفاءة أداء سيرفرات تطبيقاتنا.',
-                },
-                {
-                    title: 'مصمم تجربة وواجهة مستخدم (UI/UX)',
-                    description: 'نبحث عن مصمم موهوب يمتلك القدرة على خلق تجارب مستخدم مذهلة ودمج الفن مع الوظيفة في تصاميم واضحة وعصرية.',
-                },
-                {
-                    title: 'مدير مشاريع',
-                    description: 'نبحث عن مدير مشاريع خبير لقيادة مشاريعنا نحو النجاح، مع ضمان الجودة والالتزام بالجدول الزمني من الفكرة وحتى التسليم.',
+                    title: 'متسوقو نمط الحياة',
+                    description: 'نشطون جداً على وسائل التواصل الاجتماعي ويستجيبون للتوجهات العالمية الفاخرة.',
                 },
             ]
         },
         calendly: {
-            badge: "جدولة اجتماع",
-            title: "هل أنت مستعد لحجز مكالمة؟",
-            subtitle: "اختر الوقت الذي يناسبك",
+            badge: "احجز موعدك",
+            title: "هل أنت مستعد لفحصك؟",
+            subtitle: "اختر وقتاً لتحليل بشرتك الرقمي",
         },
         footer: {
-            description: "تقدم إكسفاي وكلاء أتمتة بالذكاء الاصطناعي لتحصيل الديون، والالتزام بنظام حماية الأجور (زاتكا)، ومتابعة التوطين، مصممة خصيصاً لتلبية احتياجات الشركات في المملكة العربية السعودية.",
+            description: "4ver Lab هو أول مختبر للعناية بالبشرة مخصص في السعودية، يجمع بين التكنولوجيا الكورية والتصميم الفاخر لطقوسك الفريدة.",
             sections: {
-                company: "الشركة",
-                ventures: "مشاريعنا",
-                contact: "كن على اتصال",
+                company: "العلامة التجارية",
+                ventures: "تقنيتنا",
+                contact: "انضم للمختبر",
             },
-            copyright: "© {year} إكسفاي. جميع الحقوق محفوظة.",
-            businessInfo: "السجل التجاري",
+            copyright: "© {year} 4ver Lab. جميع الحقوق محفوظة.",
+            businessInfo: "علم مخصص",
         }
     }
 };

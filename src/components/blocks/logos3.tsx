@@ -127,18 +127,7 @@ const Logos3 = ({
       image: "/images/Clientlogos/deva logo 1.png",
       className: "h-20 w-auto",
     },
-    {
-      id: "logo-17",
-      description: "Logo 17",
-      image: "/images/Clientlogos/exafai.png",
-      className: "h-20 w-auto",
-    },
-    {
-      id: "logo-18",
-      description: "Logo 18",
-      image: "/images/Clientlogos/frvr lab.png",
-      className: "h-20 w-auto",
-    },
+
     {
       id: "logo-19",
       description: "Logo 19",

@@ -86,7 +86,7 @@ export default function TeamSection() {
                 <div className={`flex justify-center md:justify-end gap-2 mb-6 ${isRtl ? 'flex-row-reverse' : ''}`}>
                     <button
                         onClick={() => scroll("prev")}
-                        className="w-10 h-10 rounded-full bg-card-bg border border-card-border hover:border-primary hover:shadow-[0_0_15px_rgba(48,140,140,0.2)] flex items-center justify-center transition-all duration-300"
+                        className="w-10 h-10 rounded-full bg-card-bg border border-card-border hover:border-primary hover:shadow-[0_0_15px_rgba(226,53,118,0.2)] flex items-center justify-center transition-all duration-300"
                         aria-label="Previous"
                     >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={isRtl ? 'rotate-180' : ''}>
@@ -95,7 +95,7 @@ export default function TeamSection() {
                     </button>
                     <button
                         onClick={() => scroll("next")}
-                        className="w-10 h-10 rounded-full bg-card-bg border border-card-border hover:border-primary hover:shadow-[0_0_15px_rgba(48,140,140,0.2)] flex items-center justify-center transition-all duration-300"
+                        className="w-10 h-10 rounded-full bg-card-bg border border-card-border hover:border-primary hover:shadow-[0_0_15px_rgba(226,53,118,0.2)] flex items-center justify-center transition-all duration-300"
                         aria-label="Next"
                     >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={isRtl ? 'rotate-180' : ''}>
@@ -131,7 +131,7 @@ export default function TeamSection() {
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
-                            <div className="relative w-[200px] h-[200px] rounded-2xl overflow-hidden premium-card mb-4 group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(48,140,140,0.3)] transition-all duration-500 ease-out z-10">
+                            <div className="relative w-[200px] h-[200px] rounded-2xl overflow-hidden premium-card mb-4 group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(226,53,118,0.3)] transition-all duration-500 ease-out z-10">
                                 {memberImages[member.name] ? (
                                     <>
                                         <Image
@@ -145,7 +145,7 @@ export default function TeamSection() {
                                     </>
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/30 via-primary/10 to-transparent">
-                                        <span className="text-4xl font-black text-white/50 group-hover:text-white group-hover:scale-125 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(48,140,140,0.8)]">
+                                        <span className="text-4xl font-black text-white/50 group-hover:text-white group-hover:scale-125 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(226,53,118,0.8)]">
                                             {member.name.split(' ').map(n => n.charAt(0)).join('')}
                                         </span>
                                     </div>

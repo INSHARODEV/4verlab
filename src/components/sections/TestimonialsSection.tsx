@@ -89,12 +89,12 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="products" className="relative py-32 bg-[#292931] text-white overflow-hidden" dir={dir}>
+    <section id="products" className="relative py-32 bg-background text-white overflow-hidden" dir={dir}>
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient mesh */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#308C8C]/[0.08] via-[#308C8C]/[0.05] to-[#292931]/[0.08]"
+          className="absolute inset-0 bg-gradient-to-br from-primary/[0.08] via-primary/[0.05] to-background/[0.08]"
           animate={{
             backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
           }}
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
 
         {/* Moving light orbs */}
         <motion.div
-          className="absolute top-1/3 left-1/5 w-72 h-72 bg-[#308C8C]/15 rounded-full blur-3xl"
+          className="absolute top-1/3 left-1/5 w-72 h-72 bg-primary/15 rounded-full blur-3xl"
           animate={{
             x: [0, 150, 0],
             y: [0, 80, 0],
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-[#308C8C]/15 rounded-full blur-3xl"
+          className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-primary/15 rounded-full blur-3xl"
           animate={{
             x: [0, -100, 0],
             y: [0, -60, 0],
@@ -181,12 +181,12 @@ export default function TestimonialsSection() {
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="h-4 w-4 text-[#308C8C]" />
+              <Sparkles className="h-4 w-4 text-primary" />
             </motion.div>
             <span className="text-sm font-medium text-white/80">
               {t.testimonials.badge}
             </span>
-            <div className="w-2 h-2 bg-[#308C8C] rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
           </motion.div>
 
           <motion.h2
@@ -198,7 +198,7 @@ export default function TestimonialsSection() {
             </span>
             <br />
             <motion.span
-              className="bg-clip-text text-transparent bg-gradient-to-r from-[#308C8C] via-[#308C8C]/60 to-[#308C8C]"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/60 to-primary"
               animate={{
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
               }}
@@ -246,9 +246,9 @@ export default function TestimonialsSection() {
               >
                 <div className="relative h-full premium-card rounded-3xl p-10 md:p-16 overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                   {/* Glowing orbital edge */}
-                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(ellipse_at_top_right,rgba(48,140,140,0.3),transparent_50%)] pointer-events-none" />
+                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(ellipse_at_top_right,rgba(226,53,118,0.3),transparent_50%)] pointer-events-none" />
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-[#308C8C]/[0.15] via-transparent to-[#292931]/[0.1] rounded-3xl"
+                    className="absolute inset-0 bg-gradient-to-br from-primary/[0.15] via-transparent to-background/[0.1] rounded-3xl"
                     animate={{
                       backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
                     }}
@@ -269,14 +269,14 @@ export default function TestimonialsSection() {
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
                           {testimonialsData[currentIndex].name}
                         </h3>
-                        <p className="text-[#308C8C] text-lg md:text-xl font-semibold opacity-90">
+                        <p className="text-primary text-lg md:text-xl font-semibold opacity-90">
                           {testimonialsData[currentIndex].role}
                         </p>
                       </div>
 
                       <div className="relative">
                         {/* Decorative quote mark */}
-                        <div className={`absolute -top-6 ${isRtl ? '-right-4' : '-left-4'} text-7xl text-[#308C8C]/10 font-serif leading-none select-none`}>
+                        <div className={`absolute -top-6 ${isRtl ? '-right-4' : '-left-4'} text-7xl text-primary/10 font-serif leading-none select-none`}>
                           {isRtl ? '”' : '“'}
                         </div>
                         <motion.blockquote
@@ -298,7 +298,7 @@ export default function TestimonialsSection() {
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
                             >
-                              <div className="w-2 h-2 rounded-full bg-[#308C8C] shadow-[0_0_10px_rgba(48,140,140,0.5)]" />
+                              <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(226,53,118,0.5)]" />
                               <span className="text-sm md:text-base text-white/70 font-medium">
                                 {result}
                               </span>
@@ -315,9 +315,9 @@ export default function TestimonialsSection() {
                         >
                           <motion.button
                             onClick={() => openModal('website')}
-                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-[#308C8C] text-white font-bold transition-all shadow-lg shadow-[#308C8C]/20 w-full sm:w-auto hover:bg-[#409a9a] hover:scale-[1.02] active:scale-[0.98]"
+                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold transition-all shadow-lg shadow-primary/20 w-full sm:w-auto hover:bg-primary-dark hover:scale-[1.02] active:scale-[0.98]"
                           >
-                            <Sparkles className="w-5 h-5 text-cyan-200" />
+                            <Sparkles className="w-5 h-5 text-pink-100" />
                             <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
                           </motion.button>
                           <motion.button
@@ -373,7 +373,7 @@ export default function TestimonialsSection() {
                 >
                   {index === currentIndex && (
                     <motion.div
-                      className={`absolute inset-y-0 ${isRtl ? 'right-0' : 'left-0'} bg-[#308C8C] rounded-full`}
+                      className={`absolute inset-y-0 ${isRtl ? 'right-0' : 'left-0'} bg-primary rounded-full`}
                       initial={{ width: '0%' }}
                       animate={{ width: '100%' }}
                       transition={{ duration: 6, ease: 'linear' }}
@@ -381,7 +381,7 @@ export default function TestimonialsSection() {
                     />
                   )}
                   {index < currentIndex && (
-                    <div className="absolute inset-0 bg-[#308C8C]/50 rounded-full" />
+                    <div className="absolute inset-0 bg-primary/50 rounded-full" />
                   )}
                 </button>
               ))}
@@ -414,7 +414,7 @@ export default function TestimonialsSection() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className={`relative w-full h-full max-w-6xl bg-[#292931] rounded-3xl shadow-2xl overflow-hidden border border-white/10 ${modalMode === 'video' ? 'aspect-video max-h-[80vh]' : ''}`}
+              className={`relative w-full h-full max-w-6xl bg-background rounded-3xl shadow-2xl overflow-hidden border border-white/10 ${modalMode === 'video' ? 'aspect-video max-h-[80vh]' : ''}`}
               onClick={(e) => e.stopPropagation()}
             >
               {modalMode === 'video' ? (
@@ -438,7 +438,7 @@ export default function TestimonialsSection() {
                         <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
                       </div>
                       <div className="text-sm font-medium text-white/40 truncate max-w-[200px] md:max-w-md bg-white/5 px-4 py-1 rounded-full border border-white/5">
-                        exefai.sa{testimonialsData[currentIndex].url}
+                        4verlab.sa{testimonialsData[currentIndex].url}
                       </div>
                     </div>
                     <div className="flex items-center gap-4">

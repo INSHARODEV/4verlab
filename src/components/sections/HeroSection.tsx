@@ -31,7 +31,7 @@ export default function HeroSection() {
                             {/* Text glow aura */}
                             <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-0 animate-fade-in-up" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }} />
                             <h1
-                                className="relative text-4xl md:text-5xl lg:text-7xl xl:text-[5rem] font-bold leading-[1.1] animate-fade-in-up bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-cyan-200 drop-shadow-[0_0_25px_rgba(48,140,140,0.6)]"
+                                className="relative text-4xl md:text-5xl lg:text-7xl xl:text-[5rem] font-bold leading-[1.1] animate-fade-in-up bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-cyan-200 drop-shadow-[0_0_25px_rgba(226,53,118,0.6)]"
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 {t.hero.title}

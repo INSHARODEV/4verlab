@@ -70,7 +70,7 @@ export default function OpenPositionsSection() {
                                 {slide.map((position, posIndex) => (
                                     <motion.div
                                         key={posIndex}
-                                        className={`glass-card rounded-2xl p-8 text-white max-w-md mx-auto border border-white/10 hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(48,140,140,0.1)] transition-all duration-500 group ${isRtl ? 'text-right' : 'text-left'}`}
+                                        className={`glass-card rounded-2xl p-8 text-white max-w-md mx-auto border border-white/10 hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(226,53,118,0.1)] transition-all duration-500 group ${isRtl ? 'text-right' : 'text-left'}`}
                                         custom={posIndex}
                                         variants={{
                                             hidden: { opacity: 0, y: 40 },
@@ -129,7 +129,7 @@ export default function OpenPositionsSection() {
                                 key={index}
                                 onClick={() => scrollTo(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === selectedIndex
-                                    ? 'bg-primary w-8 shadow-[0_0_10px_rgba(48,140,140,0.4)]'
+                                    ? 'bg-primary w-8 shadow-[0_0_10px_rgba(226,53,118,0.4)]'
                                     : 'bg-foreground/30 hover:bg-foreground/50'
                                     }`}
                             />

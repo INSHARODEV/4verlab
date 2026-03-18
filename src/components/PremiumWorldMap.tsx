@@ -6,13 +6,8 @@ import { useEffect, useRef, useState } from "react";
 // Note: We use pre-calculated centroids for key countries to ensure markers 
 // align perfectly with the custom SVG map paths.
 const SVG_COORDS: Record<string, { x: number; y: number }> = {
-    bogota: { x: 270, y: 451 },
-    istanbul: { x: 574, y: 344 },
-    cairo: { x: 561, y: 385 },
     ksa: { x: 602, y: 392 },
-    uae: { x: 626, y: 393 },
-    usa: { x: 144, y: 291 },
-    ca: { x: 203, y: 173 },
+    korea: { x: 800, y: 300 }, // Approximate for South Korea
 };
 
 function geoToSvg(id: string): { x: number; y: number } {
@@ -21,27 +16,17 @@ function geoToSvg(id: string): { x: number; y: number } {
 
 // ───── Location data with EN + AR labels ─────
 const OFFICES = [
-    { id: "bogota", en: "Bogota", ar: "بوغوتا", color: "#f4ca64", labelDx: 0, labelDy: 20 },
-    { id: "istanbul", en: "Istanbul", ar: "إسطنبول", color: "#f4ca64", labelDx: 0, labelDy: -14 },
-    { id: "cairo", en: "Cairo", ar: "القاهرة", color: "#f4ca64", labelDx: -32, labelDy: -10 },
+    { id: "korea", en: "South Korea", ar: "كوريا الجنوبية", color: "#f4ca64", labelDx: 0, labelDy: -14 },
 ];
 
 const MARKETS = [
-    { id: "ksa", en: "KSA", ar: "السعودية", color: "#22d3ee", labelDx: 0, labelDy: 24 },
-    { id: "uae", en: "UAE", ar: "الإمارات", color: "#22d3ee", labelDx: 28, labelDy: -4 },
-    { id: "usa", en: "USA", ar: "أمريكا", color: "#22d3ee", labelDx: 0, labelDy: -14 },
-    { id: "ca", en: "Canada", ar: "كندا", color: "#22d3ee", labelDx: 0, labelDy: -14 },
+    { id: "ksa", en: "Saudi Arabia", ar: "السعودية", color: "#22d3ee", labelDx: 0, labelDy: 24 },
 ];
 
 const ALL = [...OFFICES, ...MARKETS];
 
 const ARCS = [
-    { from: "istanbul", to: "ksa" },
-    { from: "istanbul", to: "uae" },
-    { from: "cairo", to: "ksa" },
-    { from: "cairo", to: "uae" },
-    { from: "bogota", to: "usa" },
-    { from: "bogota", to: "ca" },
+    { from: "korea", to: "ksa" },
 ];
 
 function arcPath(x1: number, y1: number, x2: number, y2: number) {
@@ -110,14 +95,14 @@ export default function PremiumWorldMap({ language = "en" }: PremiumWorldMapProp
 
                 {/* Dot grid */}
                 <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r="0.5" fill="rgba(48,140,140,0.08)" />
+                    <circle cx="1" cy="1" r="0.5" fill="rgba(226,53,118,0.08)" />
                 </pattern>
                 <rect width="1010" height="666" fill="url(#dots)" rx="24" />
 
                 {/* Real country paths */}
                 <g
                     fill="#1e3a3a"
-                    stroke="#308C8C"
+                    stroke="#e23576"
                     strokeWidth="0.5"
                     strokeOpacity="0.4"
                     dangerouslySetInnerHTML={{ __html: mapSvg }}

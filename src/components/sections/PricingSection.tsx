@@ -44,7 +44,7 @@ export default function PricingSection() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <div className="glass-card rounded-3xl p-4 sm:p-6 glow-border hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(48,140,140,0.15)]">
+                    <div className="glass-card rounded-3xl p-4 sm:p-6 glow-border hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(226,53,118,0.15)]">
                         <Image
                             src="/images/pricing.png"
                             alt="Pricing plans"
