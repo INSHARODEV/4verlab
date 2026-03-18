@@ -262,25 +262,25 @@ export default function TestimonialsSection() {
                     }}
                   />
 
-                  <div className="relative z-10 h-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                  <div className="relative z-10 h-full flex flex-col items-center justify-center max-w-3xl mx-auto text-center">
                     {/* Content Column */}
-                    <div className="flex-1 flex flex-col justify-center">
-                      <div className="flex-shrink-0 text-center lg:text-start mb-8">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+                    <div className="flex-1 flex flex-col justify-center w-full">
+                      <div className="flex-shrink-0 text-center mb-8">
+                        <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                           {testimonialsData[currentIndex].name}
                         </h3>
-                        <p className="text-primary text-lg md:text-xl font-semibold opacity-90">
+                        <p className="text-primary text-xl md:text-2xl font-semibold opacity-90">
                           {testimonialsData[currentIndex].role}
                         </p>
                       </div>
 
                       <div className="relative">
                         {/* Decorative quote mark */}
-                        <div className={`absolute -top-6 ${isRtl ? '-right-4' : '-left-4'} text-7xl text-primary/10 font-serif leading-none select-none`}>
-                          {isRtl ? '”' : '“'}
+                        <div className={`absolute -top-10 left-1/2 -translate-x-1/2 text-8xl text-primary/10 font-serif leading-none select-none`}>
+                          “
                         </div>
                         <motion.blockquote
-                          className={`text-lg md:text-xl text-white/80 leading-relaxed mb-8 font-light italic ${isRtl ? 'pr-8' : 'pl-8'}`}
+                          className={`text-xl md:text-2xl text-white/80 leading-relaxed mb-10 font-light italic`}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.3, duration: 0.8 }}
@@ -308,7 +308,7 @@ export default function TestimonialsSection() {
 
                         {/* Action Buttons */}
                         <motion.div
-                          className="flex flex-wrap items-center gap-4"
+                          className="flex flex-wrap items-center justify-center gap-6 mt-8"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.8, duration: 0.6 }}
@@ -320,27 +320,7 @@ export default function TestimonialsSection() {
                             <Sparkles className="w-5 h-5 text-pink-100" />
                             <span className="whitespace-nowrap">{t.testimonials.learnMore}</span>
                           </motion.button>
-                          <motion.button
-                            onClick={() => openModal('website')}
-                            className="flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white/[0.05] text-white font-semibold transition-all border border-white/10 w-full sm:w-auto hover:bg-white/[0.1] hover:border-white/20 active:scale-[0.98]"
-                          >
-                            <FileText className="w-5 h-5 text-white/60" />
-                            <span className="whitespace-nowrap">{t.testimonials.viewCaseStudy}</span>
-                          </motion.button>
                         </motion.div>
-                      </div>
-                    </div>
-
-                    {/* Video Column */}
-                    <div className="flex-1 w-full lg:w-1/2 aspect-video lg:aspect-square xl:aspect-video">
-                      <div className="relative h-full w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl group/video bg-black/40">
-                        <iframe
-                          src={testimonialsData[currentIndex].iframe}
-                          title={`${testimonialsData[currentIndex].name} Video`}
-                          className="absolute inset-0 w-full h-full z-10"
-                          allowFullScreen
-                          frameBorder="0"
-                        />
                       </div>
                     </div>
                   </div>

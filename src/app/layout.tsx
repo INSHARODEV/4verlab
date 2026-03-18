@@ -21,23 +21,23 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "إكسفاي | تحصيل الديون والرواتب بالذكاء الاصطناعي في السعودية",
+  title: "4ver Lab | First Personalized Skincare Lab in MENA",
   description:
-    "أتمتة تحصيل الديون (أسرع بنسبة 30%)، والالتزام بنظام حماية الأجور، ومتابعة التوطين عبر وكلاء ذكاء اصطناعي مصممين للشركات السعودية. دعم من قلب الرياض. اطلب تجربة مجانية الآن.",
+    "Every customer begins with a quick digital skin scan. Experts create a personalized formula based on results, delivered monthly through a premium subscription.",
   openGraph: {
-    title: "إكسفاي | تحصيل الديون والرواتب بالذكاء الاصطناعي في السعودية",
+    title: "4ver Lab | First Personalized Skincare Lab in MENA",
     description:
-      "أتمتة تحصيل الديون (أسرع بنسبة 30%)، والالتزام بنظام حماية الأجور، ومتابعة التوطين عبر وكلاء ذكاء اصطناعي مصممين للشركات السعودية. دعم من قلب الرياض. اطلب تجربة مجانية الآن.",
-    url: "https://insharo.com",
-    siteName: "إكسفاي",
-    locale: "ar_SA",
+      "Skincare becomes a lifestyle, not just a purchase. Personalized Science 4 YOUR Skin.",
+    url: "https://4verlab.sa",
+    siteName: "4ver Lab",
+    locale: "en_SA",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "إكسفاي | تحصيل الديون والرواتب بالذكاء الاصطناعي في السعودية",
+    title: "4ver Lab | First Personalized Skincare Lab in MENA",
     description:
-      "أتمتة تحصيل الديون (أسرع بنسبة 30%)، والالتزام بنظام حماية الأجور، ومتابعة التوطين عبر وكلاء ذكاء اصطناعي مصممين للشركات السعودية. دعم من قلب الرياض. اطلب تجربة مجانية الآن.",
+      "Skincare becomes a lifestyle, not just a purchase. Personalized Science 4 YOUR Skin.",
   },
 };
 
