@@ -39,9 +39,9 @@ export default function Footer() {
                         <Image
                             src="/images/4verlablogo.png"
                             alt="4ver Lab"
-                            width={120}
-                            height={120}
-                            className="h-16 w-auto invert brightness-0"
+                            width={172}
+                            height={361}
+                            className="h-20 w-auto invert brightness-0"
                         />
                         <p className={`text-white/60 text-sm leading-relaxed max-w-xs ${isRtl ? 'text-right' : 'text-left'}`}>
                             {t.footer.description}

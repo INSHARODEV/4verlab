@@ -39,18 +39,18 @@ export default function Header() {
     };
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 bg-header-bg backdrop-blur-md border-b border-white/10 transition-all duration-300 ${scrolled ? "py-0 shadow-lg shadow-black/20" : "py-0"}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 bg-header-bg/95 backdrop-blur-md border-b border-white/10 transition-all duration-300 ${scrolled ? "py-0 shadow-lg shadow-black/20" : "py-0"}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-20"}`}>
+                <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16 md:h-20" : "h-20 md:h-[110px]"}`}>
                     {/* Logo */}
                     <Link href="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:brightness-110">
                         <Image
                             src="/images/4verlablogo.png"
                             alt="4ver Lab"
-                            width={160}
-                            height={160}
+                            width={172}
+                            height={361}
                             priority
-                            className={`w-auto invert brightness-0 transition-all duration-300 ${scrolled ? "h-16 md:h-20" : "h-20 md:h-28"}`}
+                            className={`w-auto invert brightness-0 transition-all duration-300 ${scrolled ? "h-12 md:h-16" : "h-16 md:h-24"}`}
                         />
                     </Link>
 
