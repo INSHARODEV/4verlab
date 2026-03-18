@@ -47,10 +47,10 @@ export default function Header() {
                         <Image
                             src="/images/4verlablogo.png"
                             alt="4ver Lab"
-                            width={100}
-                            height={100}
+                            width={160}
+                            height={160}
                             priority
-                            className={`w-auto invert brightness-0 transition-all duration-300 ${scrolled ? "h-10 md:h-12" : "h-12 md:h-16"}`}
+                            className={`w-auto invert brightness-0 transition-all duration-300 ${scrolled ? "h-16 md:h-20" : "h-20 md:h-28"}`}
                         />
                     </Link>
 
