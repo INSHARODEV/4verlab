@@ -116,7 +116,7 @@ export const translations = {
         },
         podcast: {
             badge: "Coming Soon",
-            title: ".4ver lab channel",
+            title: ".4evr lab channel",
             description: "Stay tuned for our lifestyle channel where we dive deep into skin science and Korean beauty trends.",
             launchingSoon: "Launching Soon",
             availableOn: "Available on",
