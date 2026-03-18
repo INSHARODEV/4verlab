@@ -53,7 +53,7 @@ export default function PodcastSection() {
                             />
                         </div>
                         <div className={`absolute ${isRtl ? 'left-0 sm:left-4 md:left-8 lg:-right-16' : 'right-0 sm:right-4 md:right-8 lg:-left-16'} top-1/2 transform -translate-y-1/2 w-60 z-30`}>
-                            <div className="bg-black/70 backdrop-blur-xl rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] p-5 space-y-4 border border-white/10">
+                            <div className="bg-black/95 backdrop-blur-3xl rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.7)] p-5 space-y-4 border border-white/10">
                                 {t.podcast.platforms.map((name, index) => (
                                     <Link href="#contact" key={name}>
                                         <div className={`flex items-center gap-4 hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/5 rounded-xl p-1 ${isRtl ? 'flex-row-reverse' : ''}`}>
