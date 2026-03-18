@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
 
         {/* Main Testimonial Display */}
         <div className="relative max-w-6xl mx-auto mb-16 perspective-[2000px]">
-          <div className="relative h-[550px] md:h-[450px]" style={{ transformStyle: 'preserve-3d' }}>
+          <div className="relative h-[700px] md:h-[550px]" style={{ transformStyle: 'preserve-3d' }}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
